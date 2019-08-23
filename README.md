@@ -139,22 +139,21 @@ on the right side of the line. If you are not sure about something,
   projects. For example, you may not look at the work done by a
   student in past years' courses, and you may not look at similar
   course projects at other universities.
-<li>All submitted work must be new and original.
+ <li>All submitted work must be new and original.</li>
   
 </ol>
 
 ### Late Policy
 
-<ol>
-<li>All projects/assignments must be submitted in class the day they
+1. All projects/assignments must be submitted in class the day they
 are due.
-<li>For each day a project/assignment is late, you lose 10% of the
+1. For each day a project/assignment is late, you lose 10% of the
   points for that project. So if you submit two days after the
   deadline, your maximum points on that project will be 80%.
-<li>In this class, it is always better to do the work (even late) than not
+1. In this class, it is always better to do the work (even late) than not
 do it at all.
-<li>If you become ill: contact the instructor. A medical note is
-required to miss an exam.
+1. If you become ill: contact the instructor. A medical note is
+ required to miss an exam.</li>
 
 </ol>
 
