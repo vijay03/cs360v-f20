@@ -14,4 +14,4 @@ Email: rak@cs.utexas.edu
 
 Office hours: TBD
 
-**Piazza Link: [piazza.com/utexas/fall2019/cs378virtualization](piazza.com/utexas/fall2019/cs378virtualization)**
+**Piazza Link: [piazza.com/utexas/fall2019/cs378virtualization](http://piazza.com/utexas/fall2019/cs378virtualization)**
