@@ -13,3 +13,5 @@ Office hours: 3-4 PM CST Wednesday and Friday
 Email: rak@cs.utexas.edu
 
 Office hours: TBD
+
+**Piazza Link: [piazza.com/utexas/fall2019/cs378virtualization](piazza.com/utexas/fall2019/cs378virtualization)**
