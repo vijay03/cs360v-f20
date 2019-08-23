@@ -113,7 +113,9 @@ on the right side of the line. If you are not sure about something,
 <li>All submitted work must be new and original.
 </ol>
 
+
 #### Late Policy
+
 
 <ol>
 <li>All projects/assignments must be submitted in class the day they
