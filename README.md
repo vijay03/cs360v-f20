@@ -2,19 +2,40 @@
 
 Welcome to CS 378 Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has a significant project component to be completed over the course of the semester. *Do not take this course if you are not comfortable reading, editing, and writing code*. 
 
+ This course will introduce students to
+  a range of exciting topics including:</p>
+  <ul>
+    <li>Basics of Virtual Machines</li>
+    <li>Basics of Containers</li>
+    <li>How CPU is Virtualized</li>
+    <li>How Storage is Virtualized</li>
+    <li>How Network is Virtualized</li>
+    <li>Nested Virtualization</li>
+    <li>Hardware Features Assisting Virtualization</li>
+    <li>Deploying Virtual Machines</li>
+    <li>Orchestrating Containers</li>
+    <li>Datacenters and Virtualization</li>
+  </ul>
+
+Aside from teaching you the concepts behind virtualization, this course is meant to get you familiar with the commonly used tools and software. You should get used to using virtual machines, and containers. You will gain more experience with Git, and with real-world code bases.
+
+**Piazza Link: [piazza.com/utexas/fall2019/cs378virtualization](http://piazza.com/utexas/fall2019/cs378virtualization)** 
+
+**Canvas Link: [https://utexas.instructure.com/courses/1254479](https://utexas.instructure.com/courses/1254479)** 
+
+**Class Timing and Location**: TuTh 3:30 pm - 5:00pm in **GDC 1.304**
+
 **Instructor: [Vijay Chidambaram](https://www.cs.utexas.edu/~vijay/)**
 
 Email: vijayc@utexas.edu
 
-Office hours: 3-4 PM CST Wednesday and Friday
+Office hours: 3-4 PM CST Wednesday and Friday, GDC 6.436
 
 **TA: [Rohan Kadekodi](https://www.cs.utexas.edu/~rak/)**
 
 Email: rak@cs.utexas.edu
 
 Office hours: TBD
-
-**Piazza Link: [piazza.com/utexas/fall2019/cs378virtualization](http://piazza.com/utexas/fall2019/cs378virtualization)**
 
 ### Grading 
 
@@ -61,6 +82,14 @@ Laptops, tablets, and ereaders are **banned** from exams. You should not need th
   base).</p>
 
 <p>More details about the projects will be added shortly.</p>
+
+### Deadlines (tentative)
+
+**Oct 10** Midterm 1 <br>
+**Oct 15** Project 1 due <br>
+**Nov 21** Midterm 2 <br>
+**Dec 3-5** In-class presentations about open-source contributions <br>
+**Dec 12** Report due about open-source contributions <br>
 
 ### Course Policies
 
@@ -111,11 +140,10 @@ on the right side of the line. If you are not sure about something,
   student in past years' courses, and you may not look at similar
   course projects at other universities.
 <li>All submitted work must be new and original.
+  
 </ol>
 
-
-#### Late Policy
-
+### Late Policy
 
 <ol>
 <li>All projects/assignments must be submitted in class the day they
@@ -127,8 +155,8 @@ are due.
 do it at all.
 <li>If you become ill: contact the instructor. A medical note is
 required to miss an exam.
-</ol>
 
+</ol>
 
 ### Acknowledgements
 
