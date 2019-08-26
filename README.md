@@ -140,19 +140,17 @@ on the right side of the line. If you are not sure about something,
   course projects at other universities.
 10. All submitted work must be new and original.
 
-### Late Policy
+#### Late Policy
 
 1. All projects/assignments must be submitted in class the day they
 are due.
-1. For each day a project/assignment is late, you lose 10% of the
+2. For each day a project/assignment is late, you lose 10% of the
   points for that project. So if you submit two days after the
   deadline, your maximum points on that project will be 80%.
-1. In this class, it is always better to do the work (even late) than not
+3. In this class, it is always better to do the work (even late) than not
 do it at all.
-1. If you become ill: contact the instructor. A medical note is
- required to miss an exam.</li>
-
-</ol>
+4. If you become ill: contact the instructor. A medical note is
+ required to miss an exam.
 
 ### Acknowledgements
 
