@@ -114,34 +114,31 @@ instructor.</p>
 
 #### Collaboration 
 
-<ol>
-<li>The students are encouraged to do the projects in groups of two or three.
-<li>All exams are done individually, with absolutely no collaboration.
-<li>Each student must present.
-<li>I strongly encourage you to discuss the projects and assignments with
+1. The students are encouraged to do the projects in groups of two or three.
+2. All exams are done individually, with absolutely no collaboration.
+3. Each student must present.
+4. I strongly encourage you to discuss the projects and assignments with
 anyone you can. That's the way good science happens. But all work and
 writeup for the assignment must be your own, and only your own.
-<li>As a professional, you should acknowledge significant contributions or
+5. As a professional, you should acknowledge significant contributions or
 collaborations in your written or spoken presentations.
-<li>The student code of conduct
+6. The student code of conduct
 is <a href="http://www.cs.utexas.edu/users/ear/CodeOfConduct.html">here</a>. Intellectual
 dishonesty can end your career, and it is your responsibility to stay
 on the right side of the line. If you are not sure about something,
   ask.
-<li><b>The penalty for cheating on an exam, project or assignment in
+7. **The penalty for cheating on an exam, project or assignment in
     this course is an F in the course and a referral to the Dean of
-    Students office.</b>
-<li><b>You cross over from collaboration to cheating when you look at
-    another person/team's source code.</b> Discussing ideas is okay,
-  sharing code is not.
-<li>You also may not look at any course project material relating to
+    Students office.**
+8. You cross over from collaboration to cheating when you look at
+    another person/team's source code. **Discussing ideas is okay,
+  sharing code is not**.
+9. You also may not look at any course project material relating to
   any project similar to or the same as this course's class
   projects. For example, you may not look at the work done by a
   student in past years' courses, and you may not look at similar
   course projects at other universities.
- <li>All submitted work must be new and original.</li>
-  
-</ol>
+10. All submitted work must be new and original.
 
 ### Late Policy
 
