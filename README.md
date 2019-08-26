@@ -3,7 +3,7 @@
 Welcome to CS 378 Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has a significant project component to be completed over the course of the semester. *Do not take this course if you are not comfortable reading, editing, and writing code*. 
 
  This course will introduce students to
-  a range of exciting topics including:</p>
+  a range of exciting topics including:
   <ul>
     <li>Basics of Virtual Machines</li>
     <li>Basics of Containers</li>
