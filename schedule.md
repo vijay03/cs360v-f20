@@ -1,11 +1,11 @@
 | Date | Topic | Links | Notes | Deadlines and Comments |
 |------|-------|-------|-------|-----------|
 | 08/29 Thu     |   Introduction    |       |       | First day of class!         |
-|09/03 Tue|||||
-|09/05 Thu|||||
-|09/10 Tue|||||
-|09/12 Thu|||||
-|09/17 Tue|||||
+|09/03 Tue|Virtual Machines: the basics||||
+|09/05 Thu|Virtualizing CPUs||||
+|09/10 Tue|Virtualizing DRAM||||
+|09/12 Thu|Virtualizing storage||||
+|09/17 Tue|Para Virtualization|[Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf)|||
 |09/19 Thu|||||
 |09/24 Tue|||||
 |09/26 Thu|||||
@@ -17,8 +17,8 @@
 |10/17 Thu|||||
 |10/22 Tue|||||
 |10/24 Thu|||||
-|10/29 Tue|||||
-|10/31 Thu|||||
+|10/29 Tue|**No class - SOSP**||||
+|10/31 Thu|**No class - SOSP**||||
 |11/05 Tue|||||
 |11/07 Thu|||||
 |11/12 Tue|||||
