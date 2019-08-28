@@ -12,7 +12,7 @@
 |10/01 Tue|||||
 |10/03 Thu|||||
 |10/08 Tue|||||
-|10/10 Thu|||||
+|10/10 Thu|**Midterm 1**||||
 |10/15 Tue|||||
 |10/17 Thu|||||
 |10/22 Tue|||||
@@ -24,8 +24,10 @@
 |11/12 Tue|||||
 |11/14 Thu|||||
 |11/19 Tue|||||
-|11/21 Thu|||||
+|11/21 Thu|**Midterm 2**||||
 |11/26 Tue|||||
 |11/28 Thu|||||
-|12/03 Tue|||||
-|12/05 Thu|||||
+|12/03 Tue|**In-class presentation about open-source project**||||
+|12/05 Thu|**In-class presentation about open-source project**||||
+|12/10 Tue|**In-class presentation about open-source project**||||
+|12/12 Thu|No class|||**Report due for open-source project**|
