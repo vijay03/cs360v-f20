@@ -24,8 +24,8 @@
 |11/12 Tue|||||
 |11/14 Thu|||||
 |11/19 Tue|Review||||
-|11/21 Thu|**Midterm 2**||||
-|11/26 Tue|||||
+|11/21 Thu|||||
+|11/26 Tue|**Midterm 2**||||
 |11/28 Thu|*Thanksgiving - no class*||||
 |12/03 Tue|**In-class presentation about open-source project**||||
 |12/05 Thu|**In-class presentation about open-source project**||||
