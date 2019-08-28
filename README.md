@@ -58,7 +58,7 @@ Note that these extra-credit activities will also serve you well in hunting for 
 There will be two midterms. There will not be a final exam.
 
 Midterm 1: **Oct 10th** (tentatively) <br>
-Midterm 2: **Nov 21st** (tentatively) <br>
+Midterm 2: **Nov 26th** (tentatively) <br>
 
 Exams will be based on *application* of material learnt in class, and will not require remembering details such as which register is used for which function. You will be allowed one A4 sheet of paper on which you can bring notes for the exam.
 
@@ -87,7 +87,7 @@ Laptops, tablets, and ereaders are **banned** from exams. You should not need th
 
 **Oct 10** Midterm 1 <br>
 **Oct 15** Project 1 due <br>
-**Nov 21** Midterm 2 <br>
+**Nov 26** Midterm 2 <br>
 **Dec 3-5** In-class presentations about open-source contributions <br>
 **Dec 12** Report due about open-source contributions <br>
 
