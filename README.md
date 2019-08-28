@@ -25,6 +25,8 @@ Aside from teaching you the concepts behind virtualization, this course is meant
 
 **Class Timing and Location**: TuTh 3:30 pm - 5:00pm in **GDC 1.304**
 
+**[Schedule](https://github.com/vijay03/cs378-f19/blob/master/schedule.md)**
+
 **Instructor: [Vijay Chidambaram](https://www.cs.utexas.edu/~vijay/)**
 
 Email: vijayc@utexas.edu
