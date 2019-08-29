@@ -6,6 +6,12 @@ is a project-intensive course.
   discussion-based class. I'll make notes like these available, but
   you need to pay attention in class.
 
+* Grading:
+    * 20% Midterm-1
+    * 20% Midterm-2
+    * 30% Project: implementing your own hypervisor
+    * 30% Project: contributing to an open-source repository related to virtualization
+    
 * There are two projects in this class: an implementation-based
   project and an open-source project. Most of the learning will come
   from doing the projects!
