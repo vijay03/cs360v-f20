@@ -4,7 +4,7 @@ is a project-intensive course.
 
 * I **don't teach with slides**. This is going to be a
   discussion-based class. I'll make notes like these available, but
-  you need to pay attention in class.
+  you need to pay attention in class. There are no textbooks for this course.
 
 * Grading:
     * 20% Midterm-1
