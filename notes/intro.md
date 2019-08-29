@@ -38,6 +38,7 @@ is a project-intensive course.
     * [Unikernels Queue article](https://www.seltzer.com/margo/teaching/CS508.19/papers/madhavapeddy13.pdf) comes out in 2013
     * AWS Lambda introduced in November 2014
     
+* The main force driving progress in virtualization is **economics**: virtualization allows better utilization of hardware for the provider, and lower costs for the user
     
     
 
