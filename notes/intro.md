@@ -28,7 +28,7 @@ is a project-intensive course.
     * Virtual machines go back to at least 1969: [PDP-10 Virtual Machines](https://dl.acm.org/citation.cfm?id=803947)
     * Seminal work came out around this time: [Formal Requirements for Virtualizable Third Generation Architectures, 1974](https://profsandhu.com/cs6393_s14/popek-goldberg-1974.pdf)
     * Virtual machines started off as functional, but having poor performance
-    * A lot of progress towards good performance was made by 1997, resulting in another seminal paper: [Disco: Running Commodity OperatingSystems on Scalable Multiprocessors](https://research.cs.wisc.edu/areas/os/Qual/papers/disco.pdf)
+    * A lot of progress towards good performance was made by 1997, resulting in another seminal paper: [Disco: Running Commodity Operating Systems on Scalable Multiprocessors](https://research.cs.wisc.edu/areas/os/Qual/papers/disco.pdf)
     * VMware started in 1998
     * VMware Workstation in 1999
     * VMware ESX Server in 2001
