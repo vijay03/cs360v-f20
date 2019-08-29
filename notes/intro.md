@@ -18,6 +18,6 @@ is a project-intensive course.
     
 * History of Virtualization
     * Virtual machines go back to at least 1969: [PDP-10 Virtual Machines](https://dl.acm.org/citation.cfm?id=803947)
-    * Seminal work came out around this time: [Formal Requirements for Virtualizable Third Generation Architectures](https://profsandhu.com/cs6393_s14/popek-goldberg-1974.pdf)        
+    * Seminal work came out around this time: [Formal Requirements for Virtualizable Third Generation Architectures, 1974](https://profsandhu.com/cs6393_s14/popek-goldberg-1974.pdf)        
 
     
