@@ -16,6 +16,8 @@ is a project-intensive course.
   project and an open-source project. Most of the learning will come
   from doing the projects!
 
+* Students work in groups for 2--4 for all projects    
+
 * You can optionally do a research project with me instead of the
   open-source project. Come talk to me early if you want to do this.
     
