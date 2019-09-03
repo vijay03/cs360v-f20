@@ -57,7 +57,14 @@
             * For an instruction set to be virtualizable, all **sensitive** instructions (which deal with privileged state) must also be **privileged** instructions taht cause a trap when executed with lower privilege. 
         * What if an instruction *silently fails* if it is run in user mode
         * We can't emulate such instructions without trapping on every instruction (horribly slow)
-        * Unfortunately, x86 has such instructions. Example: `popf`
+        * Unfortunately, x86 has such instructions. Example: `popf` and `push`
+        * `push %cs` pushes `%cs` to top of stack
+            * `%cs` contains 2 bits indicating current privilege level
+            * `push %cs` in ring 1 does not cause a trp
+            * Guest OS could use this to find out its not running at Ring 0!
+        * `pushf/popf` read/write the `%eflags` register
+            * Bit 9 of `%eflags` enables interrupts
+            * In Ring 0, popfcan set bit 9, but in Ring 1, CPU silently ignores popf!
     * Trap and emulate is a **reactive** approach: we execute instructions, and react to problems or insufficient privilege
 * Another approach: **Binary Translation**
     * Pro-active approach to virtualization
