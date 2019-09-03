@@ -33,17 +33,25 @@
     1. Equivalence: The VM should be indistinguishable from the underlying hardware.
     2. Resource control: The VM should be in complete control of any virtualized resources.
     3. Efficiency: Most VM instructions should be executed directly on the underlying CPU without involving the hypervisor.
-* The basic way to do virtualization: trap and emulate
+
+* Virtualization Basic Approach #1: [Hosted Interpretation](http://www.eecs.harvard.edu/~cs161/notes/virtualization.pdf)
+    * Hypervisor or host OS maintains a software-level representation of physical hardware
+        * For example, the value of various registers as seen by the guest OS
+    * When guest OS executes an instruction, host OS updates software representation
+    * Used by Bochs to emulate x86, used in video game emulators
+    * No guest instruction is directly executed on hardware
+    * Flexible approach
+    * Doing this becomes harder as thing being emulated becomes complex (such as modern processors)
+    * Very slow (100x slower than direct execution on hardware)
+* Virtualization Basic Approach #2: trap and emulate
     * Whenever guest OS executes any instruction, it results in a trap
     * When we handle the trap in the host OS, we emulate whatever the guest was trying to do
     * For example, if it was trying to write into the trap handler table, we do the write on its behalf
-* Why is the basic approach bad?
-    * Super slow
+* Why is this approach bad?
+    * Slow (faster than #1, but still slow)
     * Executing one instruction vs trap, emulate (many instructions),
       handle control back to host OS (many instructions)
-    * Emulation means that the host OS keeps a **shadow copy** of all important guest OS data structures
-        * Host OS also has data structures representing the hardware state as seen by the guest
-        * For example, the value of various registers as seen by the guest OS
+    * Similar to #1, host OS has to maintain software-level representation of guest state
     * How can we do better?
         * Allow most instructions to execute directly on CPU, with reduced privilege
         * Trap on all instructions that require higher privelege
