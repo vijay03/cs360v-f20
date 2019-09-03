@@ -29,7 +29,7 @@
     * Isolation: a problem in the virtual machine should not affect the host or other virtual machines
     * Encapsulation: it should be possible to move a virtual machine from one physical machine to another
     * Performance: running an application on a virtual machine should have performance similar to running it on the host machine. 
-* Three goals for a virtual machine architecture:
+* Three goals for a virtual machine architecture (courtesy [Popek and Goldberg](https://cs.nyu.edu/courses/fall14/CSCI-GA.3033-010/popek-goldberg.pdf) ):
     1. Equivalence: The VM should be indistinguishable from the underlying hardware.
     2. Resource control: The VM should be in complete control of any virtualized resources.
     3. Efficiency: Most VM instructions should be executed directly on the underlying CPU without involving the hypervisor.
