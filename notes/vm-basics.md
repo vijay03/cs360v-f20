@@ -68,8 +68,13 @@
     * Trap and emulate is a **reactive** approach: we execute instructions, and react to problems or insufficient privilege
 * Another approach: **Binary Translation**
     * Pro-active approach to virtualization
-    * Instructions are *translated* into the appropriate     
-           
+    * Privileged or senstive instructions are *translated* into the appropriate actions on software-level representation of guest state
+    * Don't have to worry about whether something will cause traps: we rewrite anyway!
+    * Translated instruction blocks execute directly on the physical hardware
+    * No need to rewrite applications or guest OS
+    * This was the breakthrough that led to VMware being successful and launching VMware ESX Server
+    * Similar to approach #1, the complexity of binary translation increases with the complexity of the guest OS 
+               
 
 * Acknowledgements:
     * [James Mickens](https://mickens.seas.harvard.edu/) [fantastic slides on Virtualization](http://www.eecs.harvard.edu/~cs161/notes/virtualization.pdf)
