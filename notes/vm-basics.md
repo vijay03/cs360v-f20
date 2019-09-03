@@ -25,6 +25,14 @@
         * Thus, will work with *all* OS written to the same instruction set
         * Guest OS thinks it is running on bare-metal machine: maintaining this illusion is expensive
     * **Para-virtualization**: where the guest OS knows it is being virtualized, and participates in the process
+* What properties would we like virtual machines to have?
+    * Isolation: a problem in the virtual machine should not affect the host or other virtual machines
+    * Encapsulation: it should be possible to move a virtual machine from one physical machine to another
+    * Performance: running an application on a virtual machine should have performance similar to running it on the host machine. 
+* Three goals for a virtual machine architecture:
+    1. Equivalence: The VM should be indistinguishable from the underlying hardware.
+    2. Resource control: The VM should be in complete control of any virtualized resources.
+    3. Efficiency: Most VM instructions should be executed directly on the underlying CPU without involving the hypervisor.
 * The basic way to do virtualization: trap and emulate
     * Whenever guest OS executes any instruction, it results in a trap
     * When we handle the trap in the host OS, we emulate whatever the guest was trying to do
@@ -43,10 +51,6 @@
         * Even worse, what if the instruction *silently fails* if it is run in user mode
         * We can't emulate such instructions without trapping on every instruction (horribly slow)
         * Unfortunately, x86 has such instructions. Example: `popf`
-* Three goals for a virtual machine architecture:
-    1. Equivalence: The VM should be indistinguishable from the underlying hardware.
-    2. Resource control: The VM should be in complete control of any virtualized resources.
-    3. Efficiency: Most VM instructions should be executed directly on the underlying CPU without involving the hypervisor.
            
     
     
