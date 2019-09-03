@@ -1,7 +1,7 @@
 | Date | Topic | Links | Notes | Deadlines and Comments |
 |------|-------|-------|-------|-----------|
 | 08/29 Thu     |   Introduction    |       |[Notes](notes/intro.md) | First day of class!         |
-|09/03 Tue|Virtual Machines: the basics||||
+|09/03 Tue|Virtual Machines: the basics||[Notes](notes/vm-basics.md)||
 |09/05 Thu|Virtualizing CPUs||||
 |09/10 Tue|Virtualizing DRAM||||
 |09/12 Thu|Virtualizing storage||||
