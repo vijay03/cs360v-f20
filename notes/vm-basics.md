@@ -41,6 +41,9 @@
     * Super slow
     * Executing one instruction vs trap, emulate (many instructions),
       handle control back to host OS (many instructions)
+    * Emulation means that the host OS keeps a **shadow copy** of all important guest OS data structures
+        * Host OS also has data structures representing the hardware state as seen by the guest
+        * For example, the value of various registers as seen by the guest OS
     * How can we do better?
         * Allow most instructions to execute directly on CPU, with reduced privilege
         * Trap on all instructions that require higher privelege
@@ -51,6 +54,10 @@
         * Even worse, what if the instruction *silently fails* if it is run in user mode
         * We can't emulate such instructions without trapping on every instruction (horribly slow)
         * Unfortunately, x86 has such instructions. Example: `popf`
+    * Trap and emulate is a **reactive** approach: we execute instructions, and react to problems or insufficient privilege
+* Another approach: **Binary Translation**
+    * Pro-active approach to virtualization
+    * Instructions are *translated* into the appropriate     
            
     
     
