@@ -31,7 +31,7 @@ Aside from teaching you the concepts behind virtualization, this course is meant
 
 Email: vijayc@utexas.edu
 
-Office hours: 3-4 PM CST Wednesday and Friday, GDC 6.436
+Office hours: 1:30-2:30 PM CST Monday and Wednesday, GDC 6.436
 
 **TA: [Rohan Kadekodi](https://www.cs.utexas.edu/~rak/)**
 
