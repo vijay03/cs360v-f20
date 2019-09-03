@@ -3,6 +3,7 @@
     * Rings
     * Instruction execution
 * What is a virtual machine?
+    * Definition from [Popek and Goldberg](https://cs.nyu.edu/courses/fall14/CSCI-GA.3033-010/popek-goldberg.pdf): "A virtual machine is taken to be an efficient, isolated duplicate of the real machine" 
     * A virtual machine provides the illusion of a different physical
       machine inside the host machine, running its own operating system
     * This is termed *full-machine virtualization*
