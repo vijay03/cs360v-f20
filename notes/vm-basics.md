@@ -1,4 +1,4 @@
-* A review of the basics
+* A review of the basics: see [OSTEP](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) for refresher
     * Traps
     * Rings
     * Instruction execution
