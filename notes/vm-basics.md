@@ -66,7 +66,7 @@
             * Bit 9 of `%eflags` enables interrupts
             * In Ring 0, popfcan set bit 9, but in Ring 1, CPU silently ignores popf!
     * Trap and emulate is a **reactive** approach: we execute instructions, and react to problems or insufficient privilege
-* Another approach: **Binary Translation**
+* Approach #3: **Binary Translation**
     * Pro-active approach to virtualization
     * Privileged or senstive instructions are *translated* into the appropriate actions on software-level representation of guest state
     * Don't have to worry about whether something will cause traps: we rewrite anyway!
@@ -74,8 +74,12 @@
     * No need to rewrite applications or guest OS
     * This was the breakthrough that led to VMware being successful and launching VMware ESX Server
     * Similar to approach #1, the complexity of binary translation increases with the complexity of the guest OS 
-               
-
+* Approach used today: **Hardware-Assisted Virtualization**
+    * Intel and AMD added virtualization support to the hardware
+    * Sensitive instructions cause a trap (the original problem with approch #2)
+    * New hardware structures (`VMCS`) to control which sensitive instructions cause a trap
+    * Most virtual machines run today take advantage of hardware support 
+    
 * Acknowledgements:
     * [James Mickens](https://mickens.seas.harvard.edu/) [fantastic slides on Virtualization](http://www.eecs.harvard.edu/~cs161/notes/virtualization.pdf)
     
