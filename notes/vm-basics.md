@@ -70,5 +70,7 @@
     * Pro-active approach to virtualization
     * Instructions are *translated* into the appropriate     
            
-    
+
+* Acknowledgements:
+    * [James Mickens](https://mickens.seas.harvard.edu/) [fantastic slides on Virtualization](http://www.eecs.harvard.edu/~cs161/notes/virtualization.pdf)
     
