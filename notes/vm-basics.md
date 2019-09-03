@@ -54,9 +54,8 @@
       handle control back to host OS (many instructions)
     * Similar to #1, host OS has to maintain software-level representation of guest state
     * Doesn't always work:
-        * Need instructions that run either in user mode or kernel mode
-        * What if we had an instruction that could run in either?
-        * Even worse, what if the instruction *silently fails* if it is run in user mode
+            * For an instruction set to be virtualizable, all **sensitive** instructions (which deal with privileged state) must also be **privileged** instructions taht cause a trap when executed with lower privilege. 
+        * What if an instruction *silently fails* if it is run in user mode
         * We can't emulate such instructions without trapping on every instruction (horribly slow)
         * Unfortunately, x86 has such instructions. Example: `popf`
     * Trap and emulate is a **reactive** approach: we execute instructions, and react to problems or insufficient privilege
