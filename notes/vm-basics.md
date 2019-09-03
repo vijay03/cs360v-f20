@@ -42,6 +42,7 @@
         * What if we had an instruction that could run in either?
         * Even worse, what if the instruction *silently fails* if it is run in user mode
         * We can't emulate such instructions without trapping on every instruction (horribly slow)
+        * Unfortunately, x86 has such instructions. Example: `popf`
 * Three goals for a virtual machine architecture:
     1. Equivalence: The VM should be indistinguishable from the underlying hardware.
     2. Resource control: The VM should be in complete control of any virtualized resources.
