@@ -34,7 +34,10 @@
           Translation Blocks
         * On getting an exception (such as divide by zero), QEMU
           recreates the exact CPU state when the exception
-          occurred. If required, TBs are re-executed. 
+          occurred. If required, TBs are re-executed.
+        * QEMU checks for pending interrupts periodically (not at
+          every TB) 
+        * QEMU is about 30x faster than Bochs (which uses trap and emulate)
 * **Hardware Support for Virtualization**
     * TBD
 
