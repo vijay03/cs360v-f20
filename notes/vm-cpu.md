@@ -45,12 +45,12 @@
           special instruction is used to invalidate cached code in the
           Instruction Cache in most instruction sets. QEMU uses this
           instruction to invalidate Translation Blocks. 
-              * Unfortunately, this is not the case in x86.
-              * QEMU handles this in x86 by preventing code regions
-                from being modified; a write to a code region raises a
-                SEGV signal which is then handled by invalidating all
-                TBs related to that code page, allowing the write, and
-                redoing translation. 
+          * Unfortunately, this is not the case in x86.
+          * QEMU handles this in x86 by preventing code regions from
+                being modified; a write to a code region raises a SEGV
+                signal which is then handled by invalidating all TBs
+                related to that code page, allowing the write, and
+                redoing translation.
         * On getting an exception (such as divide by zero), QEMU
           recreates the exact CPU state when the exception
           occurred. If required, TBs are re-executed.
