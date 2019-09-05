@@ -69,3 +69,6 @@
     * [QEMU ATC 2005
       paper](http://archives.cse.iitd.ernet.in/~sbansal/csl862-virt/2010/readings/bellard.pdf)
     * [QEMU Translator Internals](https://people.redhat.com/pbonzini/qemu-test-doc/_build/html/topics/Translator-Internals.html)
+    * [QEMU Internals
+      Slides](https://www.csd.uoc.gr/~hy428/reading/qemu-internals-slides-may6-2014.pdf)
+      by Angelos Bilas and Manolis Marazakis
