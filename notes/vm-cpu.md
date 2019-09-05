@@ -63,9 +63,18 @@
     * Both allow direct execution of virtual machine on the processor
       (termed `vmentry`) until a privileged instruction is executed
     * `vmexit` happens when privilege is required
-    * Hardware support also allows the hypervisor to control when
-      `vmexit` happens (in other words, which instructions can trigger
-      a trap)
+    * Hardware support provides `VMCS` structure (one per VM) to
+      allow the hypervisor to control when `vmexit` happens (in other
+      words, which instructions can trigger a trap)
+    * `VMCS` stores host and guest state, exit conditions, and
+      pointers to other structures
+    * `VMCS` can only be accessed via `VMREAD` and `VMWRITE`
+      privileged instructions
+    * `VMCS` can be configured to trap on interrupts, memory faults,
+      IO access, and other privileged instructions
+    * `VMXON` enables the hypervisor to be run in `VMX ROOT` mode,
+      where it can launch VMs using `vmentry` (also termed `VMLAUNCH`)
+      commands. `VMXOFF` turns off this support for virtualization.
 
 * Acknowledgements and Suggested Reading
     * [AnandTech blog](https://www.anandtech.com/show/2480/4)
@@ -76,3 +85,4 @@
     * [QEMU Internals
       Slides](https://www.csd.uoc.gr/~hy428/reading/qemu-internals-slides-may6-2014.pdf)
       by Manolis Marazakis at FORTH-ICS
+    * [Intel’s Virtualization Extensions (VT-x)](https://www.cs.dartmouth.edu/~sergey/cs258/2014/TorreyGuestLecture-Hypervors.pdf) by Jacob Torrey
