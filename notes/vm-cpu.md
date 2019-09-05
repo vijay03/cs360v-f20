@@ -75,6 +75,8 @@
     * `VMXON` enables the hypervisor to be run in `VMX ROOT` mode,
       where it can launch VMs using `vmentry` (also termed `VMLAUNCH`)
       commands. `VMXOFF` turns off this support for virtualization.
+    * On `vmexit`, the reason for the exit is stored in the
+      `VMX_VMEXIT_REASON` field of `VMCS`
 
 * Acknowledgements and Suggested Reading
     * [AnandTech blog](https://www.anandtech.com/show/2480/4)
