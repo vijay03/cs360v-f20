@@ -37,7 +37,7 @@ Office hours: 1:30-2:30 PM CST Monday and Wednesday, GDC 6.436
 
 Email: rak@cs.utexas.edu
 
-Office hours: TBD
+Office hours: 5-6 PM CST Tuesday and Thursday (right after class)
 
 ### Grading 
 
