@@ -2,7 +2,7 @@
 |------|-------|-------|-------|-----------|
 | 08/29 Thu     |   Introduction    |       |[Notes](notes/intro.md) | First day of class!         |
 |09/03 Tue|Virtual Machines: the basics||[Notes](notes/vm-basics.md)||
-|09/05 Thu|Virtualizing CPUs||||
+|09/05 Thu|Virtualizing CPUs||[Notes](notes/vm-cpu.md)||
 |09/10 Tue|Virtualizing DRAM||||
 |09/12 Thu|Virtualizing storage||||
 |09/17 Tue|Para Virtualization|[Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf)|||
