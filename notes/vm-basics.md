@@ -44,7 +44,7 @@
     * Doing this becomes harder as thing being emulated becomes complex (such as modern processors)
     * Very slow (100x slower than direct execution on hardware)
 * Virtualization Basic Approach #2: trap and emulate
-    * Host OS runs in Ring 1, Guest OS runs in Ring 0, Host and guest applications run in Ring 3
+    * Host OS runs in Ring 0, Guest OS runs in Ring 1, Host and guest applications run in Ring 3
     * Whenever guest OS executes any privileged instruction, it results in a trap
     * When we handle the trap in the host OS, we emulate whatever the guest was trying to do
     * For example, if it was trying to write into the trap handler table, we do the write on its behalf
