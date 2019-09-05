@@ -36,6 +36,10 @@
           memory, rarely host registers
         * QEMU makes one Translation Block jump to another block: this
           is called Direct Block Chaining
+          * Normally, there is special code surrounding each TB for
+            initializing processor state and restoring processor state
+          * Block chaining increases performance significantly by
+            avoiding special code
         * Memory management unit emulated using `mmap`
         * Handling self-modifying code: in un-virtualized case, a
           special instruction is used to invalidate cached code in the
@@ -71,4 +75,4 @@
     * [QEMU Translator Internals](https://people.redhat.com/pbonzini/qemu-test-doc/_build/html/topics/Translator-Internals.html)
     * [QEMU Internals
       Slides](https://www.csd.uoc.gr/~hy428/reading/qemu-internals-slides-may6-2014.pdf)
-      by Angelos Bilas and Manolis Marazakis
+      by Manolis Marazakis at FORTH-ICS
