@@ -19,8 +19,8 @@
 |10/24 Thu|Unikernels: Library OS for the cloud|[ASPLOS 13 paper](http://mort.io/publications/pdf/asplos13-unikernels.pdf)|||
 |10/29 Tue|**No class - SOSP**||||
 |10/31 Thu|**No class - SOSP**||||
-|11/05 Tue|Serverless computing: the basics||||
-|11/07 Thu|||||
+|11/05 Tue|Cntr: Lightweight OS Containers|[ATC 18 paper](https://www.usenix.org/conference/atc18/presentation/thalheim)|||
+|11/07 Thu|Serverless computing: the basics||||
 |11/12 Tue|||||
 |11/14 Thu|||||
 |11/19 Tue|||||
