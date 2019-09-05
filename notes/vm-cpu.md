@@ -15,12 +15,15 @@
     * [Quick Emulator (QEMU) uses binary translation](http://archives.cse.iitd.ernet.in/~sbansal/csl862-virt/2010/readings/bellard.pdf)
         * Dynamic translation at runtime
         * Uses a translator cache like VMware
-        * Splits each target CPU instruction into micro-operations
-        * Fewer micro-ops than full set of instructions and operands
+        * Basic idea: guest code -> intermediate C code
+          (micro-operations) -> host code
+        * write C code on host, compile the code, use parts of
+          generated code to translate guest into host code
         * `dyngen` takes a file containing micro-ops as input and
           outputs a dynamic code generator
         * Dynamic code generator is invoked at run time 
         * `dyngen` uses constant parameters to locate relocated code
+        * `dyngen` replaced today with `Tiny Code Generator (tcg)`
         * Translator produces Translated Blocks (TBs) which are cached
           in a 16 MB Translator Cache
         * An entire TB must be in either user mode or kernel mode:
