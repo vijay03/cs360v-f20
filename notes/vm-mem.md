@@ -93,6 +93,7 @@ of guest page table
     Monitor](http://pages.cs.wisc.edu/~remzi/Classes/838/Spring2013/Papers/p3-agesen.pdf)
   * [Virtual Machines: Virtualizing Virtual Memory](
  https://corensic.wordpress.com/2011/12/05/virtual-machines-virtualizing-virtual-memory/) 
+  * [Hardware Virtualization: Nuts and Bolts](https://www.anandtech.com/show/2480/10)
   * [Best Practices for Paravirtualization Enhancements from Intel
  Virtualization Technology: EPT and
  VT-d](https://software.intel.com/en-us/articles/best-practices-for-paravirtualization-enhancements-from-intel-virtualization-technology-ept-and-vt-d) 
