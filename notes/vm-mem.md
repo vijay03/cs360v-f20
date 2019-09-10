@@ -28,11 +28,11 @@
      * Guest OS -> User
      * When user tries to access address, it will fault again to hypervisor
      * User -> Hypervisor
- 4. Translate Guest Physical Address to Host Physical Address
+  4. Translate Guest Physical Address to Host Physical Address
     * Do this for each guest physical address involved in page table
- 5. Allocate Page for Host Physical Address if required
- 6. Update shadow page table
- 7. Install entry in TLB
+  5. Allocate Page for Host Physical Address if required
+  6. Update shadow page table
+  7. Install entry in TLB
     * Hypervisor -> User
 * Steps 5, 6 together are called “hidden page faults”: the VM doesn’t know what is happening
 * Hidden page faults are the main overhead of memory virtualization
