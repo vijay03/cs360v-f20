@@ -52,7 +52,7 @@ generate a fault
   * 2X memory requirements for page tables 
 * Virtualizing memory with Hardware Support:
   * Intel: Extended Page Tables (EPT)
-  * Operation: see 6.2 in [1]
+  * Operation: see 6.2 in [here]((http://pages.cs.wisc.edu/~remzi/Classes/838/Spring2013/Papers/p3-agesen.pdf)
   * AMD: Nested Page Tables (NPT)
   * EPT doesn’t support dirty bits
   * TLB has VPID - address translations for different VMs are tagged with
