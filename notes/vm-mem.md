@@ -86,8 +86,7 @@ of guest page table
         * TLB miss with EPT: O(D*D) accesses: O(D) in the guest page
           table, and each block of the guest page table needs to be
           found using O(D) in the host page table.
-
-  * Overall, EPT much faster than Shadow Page Tables
+  * Overall, EPT faster than Shadow Page Tables ([2--6x faster](https://www.vmware.com/pdf/Perf_ESX_Intel-EPT-eval.pdf))
 * Suggested Reading
   * [The Evolution of an x86 Virtual Machine
     Monitor](http://pages.cs.wisc.edu/~remzi/Classes/838/Spring2013/Papers/p3-agesen.pdf)
