@@ -78,7 +78,15 @@ of guest page table
       * Invalidating page Table Entries
   * When using EPT:
       * All those overheads gone
-      * But page table walks are more expensive (need to walk two page tables)
+      * But page table walks are more expensive (need to walk two page
+        tables)
+      * TLB misses are much more expensive
+        * TLB miss normally: O(D) accesses where the page table has D
+          levels.
+        * TLB miss with EPT: O(D*D) accesses: O(D) in the guest page
+          table, and each block of the guest page table needs to be
+          found using O(D) in the host page table.
+
   * Overall, EPT much faster than Shadow Page Tables
 * Suggested Reading
   * [The Evolution of an x86 Virtual Machine
