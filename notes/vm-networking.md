@@ -1,3 +1,6 @@
+* Review previous class: Shadow Page Tables
+* Discuss Memory Virtualization with hardware support: Nested Paging  
+
 * Problem: processing network in a virtualized setting
     * When packet arrives, VM that is currently running gets interrupted
     * Hypervisor determines which VM the packet should go to
