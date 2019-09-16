@@ -73,8 +73,7 @@ Laptops, tablets, and ereaders are **banned** from exams. You should not need th
 
 <p>The first project will involve building your own hypervisor. You
   will need to know the basics of operating systems, C, and assembly
-  to complete this project.</p>
-  [README](https://github.com/vijay03/cs378-f19/blob/master/README-project-1.md) for project one.
+  to complete this project. README for project one: https://github.com/vijay03/cs378-f19/blob/master/README-project-1.md </p>
 
 <p>The second project is open-ended, and will involve adding a new
   feature to any open-source project related to virtualization and
