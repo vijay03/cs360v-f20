@@ -1,18 +1,27 @@
 ## Project 1 - Paravirtual VMM
 
 ### Updates to README:
-1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap` on 09/17
+1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap`, and added setup as well as submission instructions in `Getting Started` on 09/17
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
 
 ### Getting Started
 
-The source for this project is present in this repository: [project-1.tar.gz](https://github.com/vijay03/cs378-f19/blob/master/project-1.tar.gz)
+To fetch the source for this project, use gitolite:
+```
+git clone cs378-vijay@git.cs.utexas.edu:<groupname>-project1
+```
+
+To push the code to the repository you need to use:
+```
+git push origin master
+```
+
+Additionally, The source for this project is present in this repository: [project-1.tar.gz](https://github.com/vijay03/cs378-f19/blob/master/project-1.tar.gz)
 Untar it with the following command: `tar -xvf project-1.tar.gz`
 
-Submitting code coming soon...
-
+The submission of the code will be done through gitolite. Please use gitolite in order to modify the source code, commit and push your code. Commits made until midnight on the day of the submission deadline will be used for grading.
 
 You need access to kvm module for this project. So please use one of the following (gilligan) lab machines for this project:
 1. ginger
