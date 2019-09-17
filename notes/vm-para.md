@@ -65,7 +65,7 @@
   * Xen to Domain: async events
 * Memory is statically partitioned among domains
 * Reading:
-  * The original Xen paper
-  * The exokernel paper from SOSP 1995 
-  * HVM vs PV as seen by Amazon in 2014
-  * Old tech report from VMware written after paravirtualization just came out in 2008
+  * [The original Xen paper](http://pages.cs.wisc.edu/~remzi/Classes/838/Spring2013/Papers/xen.pdf)
+  * [The exokernel paper from SOSP 1995](https://www.cs.utexas.edu/users/dahlin/Classes/439/ref/exokernel.pdf)
+  * [HVM vs PV as seen by Amazon in 2014](https://minops.com/blog/2014/07/paravirtual-vs-hvm-images/)
+  * [Old tech report from VMware written after paravirtualization just came out in 2008](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf)
