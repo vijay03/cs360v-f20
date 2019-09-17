@@ -22,7 +22,7 @@
         * When a packet arrives for a specific VM, the network function of that VM is responsible for processing that packet
             * It can do so without interference from other VMs
     * What happens when there are more virtual machines than virtual network adaptors?
-            * Several VMs have to share the same Virtual Function
+      * Several VMs have to share the same Virtual Function
     * Difference with VMDQ:
         * Hypervisor no longer involved in copying data over to the VM
         * Hypervisor completely removed from the loop, only involved in setup phase
