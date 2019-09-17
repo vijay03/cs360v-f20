@@ -88,7 +88,7 @@ Laptops, tablets, and ereaders are **banned** from exams. You should not need th
 ### Deadlines (tentative)
 
 **Oct 10** Midterm 1 <br>
-**Oct 15** Project 1 due <br>
+**Oct 22** Project 1 due <br>
 **Nov 26** Midterm 2 <br>
 **Dec 3-5** In-class presentations about open-source contributions <br>
 **Dec 12** Report due about open-source contributions <br>
