@@ -1,11 +1,14 @@
 ## Project 1 - Paravirtual VMM
 
+Updates to README:
+1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap` on 09/17
+
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
 
 ### Getting Started
 
-The source for this project is present in this repository: project-1.tar.gz
+The source for this project is present in this repository: [project-1.tar.gz](https://github.com/vijay03/cs378-f19/blob/master/project-1.tar.gz)
 Untar it with the following command: `tar -xvf project-1.tar.gz`
 
 Submitting code coming soon...
@@ -25,6 +28,15 @@ You can also enable qemu-kvm on your personal laptops / computers and work on th
 The JOS VMM is launched by a fairly simple program in user/vmm.c. This application calls a new system call to create an environment (similar to a process) that runs in guest mode (sys_env_mkguest). Once the guest is created, the VMM then copies the bootloader and kernel into the guest's physical address space, marks the environment as runnable, and waits until the guest exits.
 
 You will need to implement key pieces of the supporting system calls for the VMM, as well as some of the copying functionality.
+
+Compile the code using the command:
+```
+$ make clean
+$ make
+```
+Please note that the compilation works with gcc version less than or equal to 5.0.0. If you decide to use one of the gilligan lab machines mentioned above for the project, please modify line 77 of GNUmakefile to the following:
+`CC      := $(GCCPREFIX)gcc-4.8 -pipe`
+This will make sure that you use gcc-4.8 for compilation of JOS. The compile using the commands above.
 
 You can try running the vmm from the shell in your guest by typing:
 ```
