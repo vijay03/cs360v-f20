@@ -5,7 +5,7 @@
 | 09/05 Thu | Virtualizing CPUs | [QEMU Internals Slides](https://www.csd.uoc.gr/~hy428/reading/qemu-internals-slides-may6-2014.pdf) | [Notes](notes/vm-cpu.md)  |  |
 | 09/10 Tue | Virtualizing DRAM | | [Notes](notes/vm-mem.md) | |
 | 09/12 Thu | Virtualizing Network  | | [Notes](notes/vm-networking.md) |  |
-| 09/17 Tue | Para Virtualization | [Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf) | |  |
+| 09/17 Tue | Para Virtualization | [Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf) | [Notes](notes/vm-para.md) |  |
 | 09/19 Thu | Looking at KVM and QEMU code  | | |  |
 | 09/24 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | |  |
 | 09/26 Thu | Containers: the basics  | | |  |
