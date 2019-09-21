@@ -122,23 +122,5 @@ Finally, you will need to extend the `sys_ipc_try_send()` to detect whether the 
 
 Once these steps are complete, you should have a fully running JOS-on-JOS.
 
-{%
-### Grading
-Your code will be tested on proper functioning of extended page table mapping, vmlaunch and resume and correct handling of vmcalls during vm exit.
-
-Add the following lines at the end of the file kern/syscall.c . This is required to test the ept map functionality.
-```
-    #ifdef TEST_EPT_MAP
-    int
-    _export_sys_ept_map(envid_t srcenvid, void *srcva, envid_t guest, void* guest_pa, int perm)
-    {
-        return sys_ept_map(srcenvid, srcva, guest, guest_pa, perm);
-    }
-    #endif
-```
-
-After adding this, you can run the gradescripts. Grade Scripts can be found here. Download both executables and run `python gradeproject.pyc` from the root directory of the project.
-%}
-
 ### Hints
 All the functions to be implemented contain hints on how to implement the respective functions as comments in the function names. So please pay attention to the commented code as well.
