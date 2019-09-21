@@ -15,7 +15,7 @@
 | 10/10 Thu | **Midterm 1** | | |  |
 | 10/15 Tue | SCONE: Secure Linux Containers with Intel SGX | [OSDI 16 paper](https://www.usenix.org/system/files/conference/osdi16/osdi16-arnautov.pdf)  | |  |
 | 10/17 Thu | My VM is Lighter (and Safer) than your Container  | [SOSP 17 paper](http://cnp.neclab.eu/projects/lightvm/lightvm.pdf)  | |  |
-| 10/22 Tue | Unikernels: Rise of the Virtual Library Operating System  | [ACM Queue article](https://www.seltzer.com/margo/teaching/CS508.19/papers/madhavapeddy13.pdf)  | |  |
+| 10/22 Tue | Unikernels: Rise of the Virtual Library Operating System  | [ACM Queue article](https://www.seltzer.com/margo/teaching/CS508.19/papers/madhavapeddy13.pdf)  | | **Project 1 due** |
 | 10/24 Thu | Unikernels: Library OS for the cloud  | [ASPLOS 13 paper](http://mort.io/publications/pdf/asplos13-unikernels.pdf)  | |  |
 | 10/29 Tue | **No class - SOSP** | | |  |
 | 10/31 Thu | **No class - SOSP** | | |  |
@@ -30,4 +30,4 @@
 | 12/03 Tue | **In-class presentation about open-source project** | | |  |
 | 12/05 Thu | **In-class presentation about open-source project** | | |  |
 | 12/10 Tue | **In-class presentation about open-source project** | | |  |
-| 12/12 Thu | No class  | | | **Report due for open-source project** |
+| 12/12 Thu | No class  | | | **Report due for Project 2 (open-source project)** |
