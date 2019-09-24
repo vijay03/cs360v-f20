@@ -91,9 +91,9 @@ possible to map the internal cloud infrastructure, identify where a
 particular target VM is likely to reside, and then instantiate new VMs
 until one is placed co-resident with the target. We explore how such
 placement can then be used to mount cross-VM side-channel attacks to
-extract information from a target VM on the same machine.”  Can one
-determine where in the cloud infrastructure an instance is located?
-(Section 5)
+extract information from a target VM on the same machine.”  
+* Can one determine where in the cloud infrastructure an instance is
+  located? (Section 5)
 * Can one easily determine if two instances are co-resident on the same
  physical machine? (Section 6) 
 * Can an adversary launch instances that will be co-resident with other
