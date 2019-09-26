@@ -8,7 +8,7 @@
 | 09/17 Tue | Para Virtualization | [Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf) | [Notes](notes/vm-para.md) |  |
 | 09/19 Thu | Review  | | |  |
 | 09/24 Tue | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
-| 09/26 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | |  |
+| 09/26 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | [Notes](notes/vm-nested.md) |  |
 | 10/01 Thu | Containers: the basics  | | |  |
 | 10/03 Tue | The technologies behind containers  | | |  |
 | 10/08 Thu | Container orchestration frameworks  | | |  |
