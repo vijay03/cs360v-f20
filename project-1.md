@@ -2,6 +2,7 @@
 
 ### Updates to README:
 1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap`, and added setup as well as submission instructions in `Getting Started` on 09/17
+2. Added the outputs that are expected after each step of the project
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
@@ -53,7 +54,7 @@ You can try running the vmm from the shell in your guest by typing:
 ```
 $ make run-vmm-nox
 ```
-This will currently panic the kernel because the code to detect vmx and extended page table support is not implemented, but as you complete the project, you will see this launch a JOS-in-JOS environment.
+This will currently panic the kernel because the code to detect vmx and extended page table support is not implemented, but as you complete the project, you will see this launch a JOS-in-JOS environment. You will see an error like `kernel panic on CPU 0 at ../vmm/vmx.c:65: vmx_check_support not implemented`
 
 #### Making a guest environment
 The JOS bookkeeping for sys_env_mkguest is already provided for you in kern/syscall.c. You may want to skim this code, as well as the code in kern/env.c to understand how environments are managed. A major difference between a guest and a regular environment is that a guest has its type set to ENV_TYPE_GUEST and has a VmxGuestInfo structure and a vmcs structure associated with it.
@@ -66,7 +67,7 @@ Read Chapters 23.6, 24.6.2, and Appendices A.3.2-3 from the [Intel manual](http:
 
 Once you have read these sections, implement the `vmx_check_support()` and `vmx_check_ept()` functions in vmm/vmx.c. You will also need to add support to `sched_yield()` to call vmxon() when launching a guest environment.
 
-If these functions are properly implemented, an attempt to start the VMM will not panic the kernel, but will fail because the vmm can't map guest bootloader and kernel into the VM.
+If these functions are properly implemented, an attempt to start the VMM will not panic the kernel, but will fail because the vmm can't map guest bootloader and kernel into the VM. The error should look something like `Error copying page into the guest - 4294967289`
 
 #### Mapping in the guest bootloader and kernel
 In user/vmm.c we have provided the structure of the code to set up the guest and bootloader. However, you must implement the memory manipulation code to copy the guest kernel and bootloader into the VM.
@@ -81,7 +82,7 @@ At this point, you have enough host-level support function to map the guest boot
 
 Implement `copy_guest_kern_gpa()` and `map_in_guest()` in user/vmm.c. For the bootloader, we use map_in_guest directly, since the bootloader is only 512 bytes, whereas the kernel's ELF header must be read by copy_guest_kern_gpa, which should then call map_in_guest for each segment.
 
-Once this is complete, the kernel will attempt to run the guest, and will panic because asm_vmrun is incomplete.
+Once this is complete, the kernel will attempt to run the guest, and will panic because asm_vmrun is incomplete. The error should look like: `kernel panic on CPU 0 at ../vmm/vmx.c:637: asm_vmrun is incomplete`
 
 #### Implementing vmlaunch and vmresume
 In this exercise, you will need to write some assembly to launch the VM. Although much of the VMCS setup is completed for you, this exercise will require you to use the vmwrite instruction to set the host stack pointer, as well as the vmlaunch and vmresume instructions to start the VM.
@@ -90,7 +91,7 @@ In order to facilitate interaction between the guest and the JOS host kernel, we
 
 Skim Chapter 26 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf) to familiarize yourself with the vmlaunch and vmresume instructions. Complete the assembly code in `asm_vmrun()` in vmm/vmx.c. Also remove the panic in the call to `asm_vmrun()`.
 
-Once this is complete, you should be able to run the VM until the guest attempts a vmcall instruction, which traps to the host kernel. Because the host isn't handling traps from the guest yet, the VM will be terminated.
+Once this is complete, you should be able to run the VM until the guest attempts a vmcall instruction, which traps to the host kernel. Because the host isn't handling traps from the guest yet, the VM will be terminated. You should see an error like `Unhandled VMEXIT, aborting guest.`
 
 ### Part 2 - Handling VM exits
 The equivalent event to a trap from an application to the operating system is called a VM exit. We have provided some skeleton code to dispatch the major types of exits we expect our guest to provide in the vmm/vmx.c function `vmexit()`. You will need to identify the reason for the exit from the VMCS, as well as implement handler functions for certain events in vmm/vmexits.c.
@@ -111,7 +112,9 @@ JOS is "told" the amount of physical memory it has by the bootloader. JOS's boot
 ```
 
 For the JOS guest, rather than emulate a BIOS, we will simply use a vmcall to request a "fake" memory map. Complete the implementation of `vmexit()` by identifying the reason for the exit from the VMCS. You may need to search Chapter 27 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf) to solve this part of the exercise.
-Implement the `VMX_VMCALL_MBMAP` case of the function `handle_vmcall()` in vmm/vmexits.c. Also, be sure to advance the instruction pointer so that the guest doesn't get in an infinite loop. Once the guest gets a little further in boot, it will attempt to discover whether the CPU supports long mode, using the cpuid instruction. Our VMCS is configured to trap on this instruction, so that we can emulate it---hiding the presence of vmx, since we have not implemented emulation of vmx in software. Once this is complete, implement `handle_cpuid()` in vmm/vmexits.c. When the host can emulate the cpuid instruction, your guest should run until it attempts to perform disk I/O.
+Implement the `VMX_VMCALL_MBMAP` case of the function `handle_vmcall()` in vmm/vmexits.c. Also, be sure to advance the instruction pointer so that the guest doesn't get in an infinite loop. Once the guest gets a little further in boot, it will attempt to discover whether the CPU supports long mode, using the cpuid instruction. Our VMCS is configured to trap on this instruction, so that we can emulate it---hiding the presence of vmx, since we have not implemented emulation of vmx in software. Now you will see an error of the form `kernel panic on CPU 0 at ../vmm/vmexits.c:262: cpuid not implemented`.
+
+Implement `handle_cpuid()` in vmm/vmexits.c. When the host can emulate the cpuid instruction, your guest should run until it attempts to perform disk I/O, giving an error of the form `Unhandled VMEXIT, aborting guest.`
 
 JOS has a user-level file system server daemon, similar to a microkernel. We place the guest's disk image as a file on the host file system server. When the guest file system daemon requests disk reads, rather than issuing ide-level commands, we will instead use vmcalls to ask the host file system daemon for regions of the disk image file. This is depicted in the image below.
 ![alt text](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/disk-architecture.jpg)
