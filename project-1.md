@@ -2,7 +2,7 @@
 
 ### Updates to README:
 1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap`, and added setup as well as submission instructions in `Getting Started` on 09/17
-2. Added the outputs that are expected after each step of the project
+2. Added the outputs that are expected after each step of the project on 09/30
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
