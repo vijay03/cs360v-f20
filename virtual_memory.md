@@ -15,7 +15,7 @@ JOS is "told" the amount of physical memory it has by the bootloader. JOS's boot
 
 #### Virtual, Linear, and Physical Addresses
 In AMD64 terminology, a virtual address consists of a segment selector and an offset within the segment. A linear address is what you get after segment translation but before page translation. A physical address is what you finally get after both segment and page translation and what ultimately goes out on the hardware bus to your RAM. Be sure you understand the difference between these three types or "levels" of addresses!
-![alt_text](http://https://github.com/vijay03/cs378-f19/figures/seg-paging.png)
+![alt_text](https://github.com/vijay03/cs378-f19/blob/master/figures/seg-paging.png)
 
 A C pointer is the "offset" component of the virtual address. In kern/bootstrap.S, we installed a Global Descriptor Table (GDT) that effectively disabled segment translation by setting all segment base addresses to 0 and limits to 0xffffffff. Hence the "selector" has no effect and the linear address always equals the offset of the virtual address.
 

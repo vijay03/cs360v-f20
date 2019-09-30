@@ -1,6 +1,6 @@
 ### PC Bootstrap
 A PC's physical address space is hard-wired to have the following general layout:
-![alt_text](http://https://github.com/vijay03/cs378-f19/figures/pc-bootstrap.png)
+![alt_text](https://github.com/vijay03/cs378-f19/blob/master/figures/pc-bootstrap.png)
 
 The first PCs, which were based on the 16-bit Intel 8088 processor, were only capable of addressing 1MB of physical memory. The physical address space of an early PC would therefore start at 0x00000000 but end at 0x000FFFFF instead of 0xFFFFFFFF. The 640KB area marked "Low Memory" was the only random-access memory (RAM) that an early PC could use; in fact the very earliest PCs only could be configured with 16KB, 32KB, or 64KB of RAM!
 

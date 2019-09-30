@@ -14,6 +14,6 @@ Of course, it would be unreasonable to read the entire disk into memory, so inst
 Since other environments can't directly call functions in the file system environment, we'll expose access to the file system environment via a remote procedure call, or RPC, abstraction, built atop JOS's IPC mechanism.
 
 Graphically, here's what a call to the file system server (say, read) looks like:
-![alt_text](http://https://github.com/vijay03/cs378-f19/figures/file-system.png)
+![alt_text](https://github.com/vijay03/cs378-f19/blob/master/figures/file-system.png)
 
 Everything below the dotted line is simply the mechanics of getting a read request from the regular environment to the file system environment.
