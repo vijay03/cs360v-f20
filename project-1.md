@@ -3,6 +3,7 @@
 ### Updates to README:
 1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap`, and added setup as well as submission instructions in `Getting Started` on 09/17
 2. Added the outputs that are expected after each step of the project on 09/30
+3. Added commands to setup GDB on 09/30
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
@@ -33,6 +34,53 @@ You need access to kvm module for this project. So please use one of the followi
 6. thurston-howell-iii
 
 You can also enable qemu-kvm on your personal laptops / computers and work on the project.
+
+### Setup GDB
+The standard version of gdb does not correctly handle the transition to long mode during JOS boot, yielding a "Packet too long" error. For debugging 64-bit code on a 32-bit platform, you need both gdb and gdb-multiarch. Below we post patched Ubuntu package.
+[gdb_7.7.1](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb)
+
+#### Installation
+If you are using the gilligan lab machines, install gdb using following command:
+```
+$ dpkg -x gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb $HOME/gdb_7.7
+GDB executable can be found at $HOME/gdb_7.7/usr/bin
+```
+If you are using personal machines, install gdb using following command:
+```
+$ sudo dpkg -i gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb
+```
+gdb7.7 requires python3.4 to run. Download and install python3.4 as given below:
+```
+wget https://www.python.org/ftp/python/3.4.5/Python-3.4.5rc1.tar.xz
+tar xf Python-3.4.5rc1.tar.xz
+./configure --prefix=$HOME/python3.4 --enable-shared --with-threads
+make
+make install
+```
+After installing python3.4 and gdb7.7, open $HOME/.bashrc and add the following lines:
+```
+export $LD_LIBRARY_PATH=/stage/public/ubuntu64/lib:$HOME/python3.4/lib
+export $PATH=$HOME/gdb7.7/usr/bin:$PATH
+```
+Finally, open (create if doesn't exist) $HOME/.gdbinit and add the following line:
+```
+set auto-load safe-path /
+```
+
+#### Using GDB
+Open a terminal window, type `source ~/.bashrc` to set the environment variables LD_LIBRARY_PATH and PATH. Use following commands:
+```
+$ cd <project-repo>/project-1
+$ make clean
+$ make
+$ make run-vmm-gdb-nox
+```
+Open another terminal window, type `source ~/.bashrc` to set the environment variables LD_LIBRARY_PATH and PATH. Using following commands:
+```
+$ cd <project-repo>/project-1
+$ gdb
+```
+This will allow you to use GDB and set breakpoints in the code.
 
 ### Part 1 - VMM Bootstrap
 The JOS VMM is launched by a fairly simple program in user/vmm.c. This application calls a new system call to create an environment (similar to a process) that runs in guest mode (sys_env_mkguest). Once the guest is created, the VMM then copies the bootloader and kernel into the guest's physical address space, marks the environment as runnable, and waits until the guest exits.
