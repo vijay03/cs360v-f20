@@ -75,7 +75,7 @@ $ make clean
 $ make
 $ make run-vmm-gdb-nox
 ```
-Open another terminal window, type `source ~/.bashrc` to set the environment variables LD_LIBRARY_PATH and PATH. Using following commands:
+Open another terminal window, type `source ~/.bashrc` to set the environment variables LD_LIBRARY_PATH and PATH. Use following commands:
 ```
 $ cd <project-repo>/project-1
 $ gdb
