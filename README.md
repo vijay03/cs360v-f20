@@ -39,6 +39,12 @@ Email: rak@cs.utexas.edu
 
 Office hours: 5-6 PM CST Tuesday and Thursday (right after class), GDC 6.440
 
+**TA/Proctor: Juthi Paul**
+
+Email: juthi_paul@utexas.edu
+
+Office hours: 10-11 AM CST Friday in GDC Basement, Desk 1
+
 ### Grading 
 
 **20%** Midterm-1 <br>

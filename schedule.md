@@ -6,11 +6,12 @@
 | 09/10 Tue | Virtualizing DRAM | | [Notes](notes/vm-mem.md) | |
 | 09/12 Thu | Virtualizing Network  | | [Notes](notes/vm-networking.md) |  |
 | 09/17 Tue | Para Virtualization | [Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf) | [Notes](notes/vm-para.md) |  |
-| 09/19 Thu | Looking at KVM and QEMU code  | | |  |
-| 09/24 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | |  |
-| 09/26 Thu | Containers: the basics  | | |  |
-| 10/01 Tue | The technologies behind containers  | | |  |
-| 10/03 Thu | Container orchestration frameworks  | | |  |
+| 09/19 Thu | Review  | | |  |
+| 09/24 Tue | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
+| 09/26 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | [Notes](notes/vm-nested.md) |  |
+| 10/01 Thu | Containers: the basics  | | |  |
+| 10/03 Tue | The technologies behind containers  | | |  |
+| 10/08 Thu | Container orchestration frameworks  | | |  |
 | 10/08 Tue | Review  | | |  |
 | 10/10 Thu | **Midterm 1** | | |  |
 | 10/15 Tue | SCONE: Secure Linux Containers with Intel SGX | [OSDI 16 paper](https://www.usenix.org/system/files/conference/osdi16/osdi16-arnautov.pdf)  | |  |
