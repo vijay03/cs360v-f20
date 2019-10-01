@@ -1,3 +1,6 @@
+
+This document contains some background related to project 1. Reading this document will help in understanding what exactly you are implementing on a high level as you work on Project-1.
+
 ### PC Bootstrap
 A PC's physical address space is hard-wired to have the following general layout:
 ![alt_text](https://github.com/vijay03/cs378-f19/blob/master/figures/pc-bootstrap.png)
@@ -41,7 +44,5 @@ Many machines don't have any physical memory at address 0x8004100000 so we can't
 ### Physical Page Management
 The operating system must keep track of which parts of physical RAM are free and which are currently in use. JOS manages the PC's physical memory with page granularity so that it can use the MMU to map and protect each piece of allocated memory.
 
-JOS is "told" the amount of physical memory it has by the bootloader. JOS's bootloader passes the kernel a multiboot info structure which possibly contains the physical memory map of the system. The memory map may exclude regions of memory that are in use for reasons including IO mappings for devices (e.g., the "memory hole"), space reserved for the BIOS, or physically damaged memory. For more details on how this structure looks and what it contains, refer to the specification. A typical physical memory map for a PC with 10 GB of memory looks like below.
+JOS is "told" the amount of physical memory it has by the bootloader. JOS's bootloader passes the kernel a multiboot info structure which possibly contains the physical memory map of the system. The memory map may exclude regions of memory that are in use for reasons including IO mappings for devices (e.g., the "memory hole"), space reserved for the BIOS, or physically damaged memory. 
 
-
-This document contains some background related to project 1. Reading this document will help in understanding what exactly you are implementing on a high level as you work on Project-1.
