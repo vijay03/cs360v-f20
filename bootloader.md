@@ -34,7 +34,7 @@ Look through the kernel source files kern/entry.S and kern/bootstrap.S and be ab
 At what point does the processor start executing 64-bit code? What exactly causes the switch from 32- to 64-bit mode?
 
 #### Using segmentation to work around position dependence
-Operating system kernels often like to be linked and run at very high virtual address, such as 0x8004100000, in order to leave the lower part of the processor's virtual address space for user programs to use. The reason for this arrangement will become clearer in the next lab.
+Operating system kernels often like to be linked and run at very high virtual address, such as 0x8004100000, in order to leave the lower part of the processor's virtual address space for user programs to use.
 
 Many machines don't have any physical memory at address 0x8004100000 so we can't count on being able to store the kernel there. Instead, we will use the processor's memory management hardware to map virtual address0x8004100000 - the link address at which the kernel code expects to run - to physical address 0x100000--- where the boot loader loaded the kernel. This way, although the kernel's virtual address is high enough to leave plenty of address space for user processes, it will be loaded in physical memory at the 1MB point in the PC's RAM, just above the BIOS ROM. This approach requires that the PC have at least a few megabytes of physical memory (so that address 0x00100000 works), but this is likely to be true of any PC built after about 1990.
 
