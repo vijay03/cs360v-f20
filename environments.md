@@ -1,6 +1,12 @@
 ### User Environments and Exception Handling
-The new include file inc/env.h contains basic definitions for user environments in JOS; read it now. The kernel uses the Env data structure to keep track of each user environment. As you can see in kern/env.c, the kernel maintains three main global variables pertaining to environments:
+In JOS the terms "environment" and "process" are interchangeable - they roughly have the same meaning. We introduce the term "environment" instead of the traditional term "process" in order to stress the point that JOS environments do not provide the same semantics as UNIX processes, even though they are roughly comparable.
 
+The include file inc/env.h contains basic definitions for user environments in JOS. The kernel uses the Env data structure to keep track of each user environment. As you can see in kern/env.c, the kernel maintains three main global variables pertaining to environments:
+```
+struct Env *envs = NULL;        /* All environments */
+struct Env *curenv = NULL;          /* the current env */
+static struct Env_list env_free_list;   /* Free list */
+```
 Once JOS gets up and running, the envs pointer points to an array of Env structures representing all the environments in the system. Once it is allocated, the envs array will contain a single instance of the Env data structure for each of the NENV possible environments. The kernel uses the curenv variable to keep track of the currently executing environment at any given time. During boot up, before the first environment is run, curenv is initially set to NULL.
 
 The Env structure is defined in inc/env.h as follows (Only important fields are mentioned):
