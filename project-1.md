@@ -4,6 +4,7 @@
 1. Added compilation instructions for JOS in `Part 1 - VMM Bootstrap`, and added setup as well as submission instructions in `Getting Started` on 09/17
 2. Added the outputs that are expected after each step of the project on 09/30
 3. Added commands to setup GDB on 09/30
+4. Added hints and details for Mapping in the guest bootloader and kernel on 10/01
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
@@ -129,6 +130,15 @@ Implement `sys_ept_map()` in kern/syscall.c, as well as `ept_lookup_gpa()` and `
 At this point, you have enough host-level support function to map the guest bootloader and kernel into the guest VM. You will need to read the kernel's ELF headers and copy the segments into the guest.
 
 Implement `copy_guest_kern_gpa()` and `map_in_guest()` in user/vmm.c. For the bootloader, we use map_in_guest directly, since the bootloader is only 512 bytes, whereas the kernel's ELF header must be read by copy_guest_kern_gpa, which should then call map_in_guest for each segment.
+
+The workflow (and hints) for this part is as follows:
+1. `copy_guest_kern_gpa()` reads the ELF header from the kernel executable (using system calls present in lib/fd.c) into the struct Elf. The kernel ELF contains multiple segments which must be copied from the host to the guest. So this function loops over all the segment headers (i.e. program headers) and calls `map_in_guest()` for each of these segments. Each segment also contains the `gpa` that should be passed to `map_in_guest()`
+2. `map_in_guest()` breaks down each segment in number of pages, loads each page into `UTEMP`, and calls `sys_ept_map()` for each page by passing the `UTEMP` as the srcva.
+3. `sys_ept_map()` first walks the page table levels at the host (given the srcva), and then gets the physical page corresponding to the virtual address srcva (i.e. it returns the struct PageInfo). The corresponding virtual address of this page is then computed using `page2kva()`, which basically acts as the hva in the call to `ept_map_hva2gpa()`.
+4. `ept_map_hva2gpa()` does a walk on the page table levels at the guest (given the gpa) using `ept_lookup_gpa()`, and then gets a page table entry at level 0 corresponding to the gpa. This function then inserts the physical address corresponding to the hva, in the page table entry returned by `ept_lookup_gpa()`.
+5. `ept_lookup_gpa()` does the walk on the page table hierarchy at the guest and returns the page table entry corresponding to a gpa. It does this by making use of the `ADDR_TO_IDX` macro in vmm/ept.h starting from the top-most EPT level, till it reaches the page table entry at level 0 which points to the actual page.
+
+On a high level, in this section, each page of the kernel as well as the bootloader is mapped from the host to the guest at particular physical addresses, and thus the kernel and the bootloader becomes available to the guest for when the guest is launched.
 
 Once this is complete, the kernel will attempt to run the guest, and will panic because asm_vmrun is incomplete. The error should look like: `kernel panic on CPU 0 at ../vmm/vmx.c:637: asm_vmrun is incomplete`
 
