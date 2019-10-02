@@ -65,21 +65,29 @@ Note that these extra-credit activities will also serve you well in hunting for 
 
 There will be two midterms. There will not be a final exam.
 
-Midterm 1: **Oct 10th** (tentatively) <br>
+Midterm 1: **Oct 10th** (in-class, [practice questions](midterm1-practice-questions.md) <br>
 Midterm 2: **Nov 26th** (tentatively) <br>
 
-Exams will be based on *application* of material learnt in class, and will not require remembering details such as which register is used for which function. You will be allowed one A4 sheet of paper on which you can bring notes for the exam.
+Exams will be based on *application* of material learnt in class, and
+will not require remembering details such as which register is used
+for which function. You will be allowed one A4 sheet of paper on which
+you can bring notes for the exam.
 
-Laptops, tablets, and ereaders are **banned** from exams. You should not need them in an exam, and they are far too flexible as communication devices to make enforcement of non-communication policies enforceable. Any use of a communication device for any reason in the exam room will earn an automatic zero on the exam.
+Laptops, tablets, and ereaders are **banned** from exams. You should
+not need them in an exam, and they are far too flexible as
+communication devices to make enforcement of non-communication
+policies enforceable. Any use of a communication device for any reason
+in the exam room will earn an automatic zero on the exam.
 
 ### Projects
 
 <p>There will be two big projects in the course. Students will work in
   groups of two or three for both projects.</p>
 
-<p>The first project will involve building your own hypervisor. You
-  will need to know the basics of operating systems, C, and assembly
-  to complete this project. README for project one: https://github.com/vijay03/cs378-f19/blob/master/project-1.md </p>
+<p>The first project will involve building parts of your own
+  hypervisor. You will need to know the basics of operating systems,
+  C, and assembly to complete this project. README for project one:
+  https://github.com/vijay03/cs378-f19/blob/master/project-1.md </p>
 
 <p>The second project is open-ended, and will involve adding a new
   feature to any open-source project related to virtualization and
