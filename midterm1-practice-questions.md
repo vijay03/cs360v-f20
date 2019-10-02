@@ -21,3 +21,8 @@ talk to me during office hours.
   memory, and L0 is employing EPT to virtualize L1 memory. What does
   CR3 point to? What are the two page tables pointed to by the
   hardware EPT?
+* When using shadow page tables, if the virtual machine is executing
+  10 applications, and the host OS is executing 20 applications, how
+  many page tables in total are allocated in memory at this point?
+* Why was the x86 instruction set considered not virtualizable?
+  Explain with an example. 
