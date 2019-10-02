@@ -65,7 +65,8 @@ Note that these extra-credit activities will also serve you well in hunting for 
 
 There will be two midterms. There will not be a final exam.
 
-Midterm 1: **Oct 10th** (in-class, [practice questions](midterm1-practice-questions.md) <br>
+Midterm 1: **Oct 10th** (in-class, [practice
+questions](midterm1-practice-questions.md)) <br>
 Midterm 2: **Nov 26th** (tentatively) <br>
 
 Exams will be based on *application* of material learnt in class, and
