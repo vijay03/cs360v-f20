@@ -10,7 +10,7 @@
 | 09/24 Tue | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
 | 09/26 Thu | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | [Notes](notes/vm-nested.md) |  |
 | 10/01 Tue | Containers: the basics  | | [Notes](notes/container-basics.md) |  |
-| 10/03 Thu | The technologies behind containers  | | |  |
+| 10/03 Thu | The technologies behind containers  | | [Notest](notes/container-nc.md) |  |
 | 10/08 Tue | Container orchestration frameworks  | | |  |
 | 10/10 Thu | **Midterm 1** | | |  |
 | 10/15 Tue | SCONE: Secure Linux Containers with Intel SGX | [OSDI 16 paper](https://www.usenix.org/system/files/conference/osdi16/osdi16-arnautov.pdf)  | |  |
