@@ -19,7 +19,7 @@
     * setns() - a new system call was added, for joining an existing namespace.
 * Namespaces do not have names
 *  /proc/pid/ns lists the namespace number for each namespace for each process
-    * **ls -al /proc/ns**
+    * **ls -al /proc/<pid>/ns**
     * **lrwxrwxrwx 1 root root 0 Apr 24 17:29 ipc -> ipc:[4026531839]**
     * **lrwxrwxrwx 1 root root 0 Apr 24 17:29 mnt -> mnt:[4026531840]**
     * **lrwxrwxrwx 1 root root 0 Apr 24 17:29 net -> net:[4026531956]**
