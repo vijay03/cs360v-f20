@@ -81,6 +81,44 @@
     * mount -t cgroup -o memory test /cgroup/memtest/
 * The cpuset control group identifies a set of processors on which each process in a group may run, and it also identifies a set of memory nodes from which processes in a group can allocate memory
 * Net_cl and Net_prio uniquely identify each group inside sockets and other networking events
+
+## Root Capabilities
+* More fine-grained access control than just root or non-root. 
+* A process could be non-root, but given root-like privileges for a
+specific task (example: using a network port)
+* Alternatively, a process could be root, and be denied access because
+of missing capabilities
+* For example, root could be denied permission to mount new devices
+* This is used to make the “container root” user significantly less
+powerful than the host root
+
+## UnionFS
+* Copy-on-write file system that is the union of existing file systems
+* UnionFS allows several containers to share common data (if we are
+running 5 containers based on the same image, we don’t have to keep
+five copies)
+* On write to the UnionFS, the overwritten data is saved to a new path,
+specific to that container
+* Thus, writes of one container do not affect reads of another container
+
+## Docker
+* Built on top of kernel namespaces, cgroups, unionFS, and capabilities
+* Each container gets its own set of namespaces and cgroups
+* Namespaces isolate containers from each other: one container can’t
+even see the list of processes in another container
+* Cgroups allow the admin to isolate the resources used by each
+container and its children
+* Running the docker daemon requires root privileges
+* As of Docker 1.3.2, images are now extracted in a chrooted subprocess
+on Linux/Unix platforms, being the first-step in a wider effort toward
+privilege separation
+* Docker provides a whitelist of capabilities to root users inside a
+container
+
+
+
 ### Reading
 * [http://www.haifux.org/lectures/299/netLec7.pdf](http://www.haifux.org/lectures/299/netLec7.pdf)
 * [https://lwn.net/Articles/531114/](https://lwn.net/Articles/531114/)
+
+
