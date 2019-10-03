@@ -1,4 +1,4 @@
-### Kernel Namespaces
+## Kernel Namespaces
 * Lightweight way to virtualize process
 * Kernel namespaces split kernel resources into one instance per namespace
 * This partitions processes, users, network stacks and other components into separate analogous pieces in order to provide processes a unique view
@@ -62,7 +62,8 @@
 * A process will have distinct set of UIDs, GIDs and capabilities
 * **IPC Namespace:**
 * Each namespace gets its own IPC objects and POSIX message queues
-### CGroups
+
+## CGroups
 * Control Groups (cgroups) are a mechanism for applying hardware resource limits and access controls to a process or collection of processes
 * The cgroup mechanism and the related subsystems provide a tree-based hierarchical, inheritable and optionally nested mechanism of resource control
 * This work was started by engineers at Google (primarily Paul Menage and Rohit Seth) in 2006 under the name "process containers; in 2007, renamed to "Control Groups".
