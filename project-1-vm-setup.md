@@ -4,11 +4,12 @@ A Virtual Machine has been setup for this project. The image file can be downloa
 
 #### Steps to setup the VM:
 1. Download the image file on the CS gilligan machines or your personal laptops (which have QEMU and KVM enabled).
-2. On one terminal, run the following command:`$ qemu-system-x86_64 -drive file=<path-to-qcow2-image>,format=qcow2 -m 512 -net user,hostfwd=tcp::<port-id>-:22 -net nic -nographic -enable-kvm`
+2. On one terminal, run the following command:<br />
+`$ qemu-system-x86_64 -drive file=<path-to-qcow2-image>,format=qcow2 -m 512 -net user,hostfwd=tcp::<port-id>-:22 -net nic -nographic -enable-kvm`<br />
 where `<port-id> = 5900 + <group-id>`. For example, if your group-id is 15, your port-id will be 5915.
 This command will start up the VM, which will listen on the port that you have entered.
-3. On another terminal, connect to the VM using the following command:
-`$ ssh -p <port-id> cs378@localhost`
+3. On another terminal, connect to the VM using the following command: <br />
+`$ ssh -p <port-id> cs378@localhost` <br />
 This command will let you connect to the VM.
 4. On connecting, enter the password as `abc123`.
 5. Copy your public *and* private ssh keys from the CS lab machine or from your local machine (`$HOME/.ssh/id_rsa` and `$HOME/.ssh/id_rsa.pub`) into the VM in the location `$HOME/.ssh/id_rsa` and `$HOME/.ssh/id_rsa.pub` respectively. (Use scp command with port-id as the -P option for copying the keys to the VM).
