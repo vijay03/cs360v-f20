@@ -5,6 +5,7 @@
 2. Added the outputs that are expected after each step of the project on 09/30
 3. Added commands to setup GDB on 09/30
 4. Added hints and details for Mapping in the guest bootloader and kernel on 10/01
+5. Added a section for using VM for the project on 10/04
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
@@ -35,6 +36,9 @@ You need access to kvm module for this project. So please use one of the followi
 6. thurston-howell-iii
 
 You can also enable qemu-kvm on your personal laptops / computers and work on the project.
+
+### Using a Virtual Machine for the project
+If you want to use a Virtual Machine for the project, please follow the steps mentioned [here](https://github.com/vijay03/cs378-f19/blob/master/project-1-vm-setup.md) for setting up the VM.
 
 ### Setup GDB
 The standard version of gdb does not correctly handle the transition to long mode during JOS boot, yielding a "Packet too long" error. For debugging 64-bit code on a 32-bit platform, you need both gdb and gdb-multiarch. Below we post patched Ubuntu package.
