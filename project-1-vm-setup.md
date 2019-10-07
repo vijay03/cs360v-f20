@@ -1,6 +1,6 @@
 ### Setting up a Virtual Machine for Project-1
 
-A Virtual Machine has been setup for this project. The image file can be downloaded [here](https://drive.google.com/open?id=1TOwha-yAAYJLpqV_-RKEwDd1CV2uGthR).
+A Virtual Machine has been setup for this project. The image file (~10.5 GB) can be downloaded [here](https://drive.google.com/open?id=1TOwha-yAAYJLpqV_-RKEwDd1CV2uGthR). A smaller image file (~8.5GB) can be downloaded [here](https://drive.google.com/open?id=1G8WwG7dHkcf0F_4i0pQhVjATNXN05MFn)
 
 #### Steps to setup the VM:
 1. Download the image file on the CS gilligan machines or your personal laptops (which have QEMU and KVM enabled).
