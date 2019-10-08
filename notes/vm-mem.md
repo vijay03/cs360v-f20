@@ -21,21 +21,15 @@
   * Index is the same as on the virtual machine: guest virtual address
   * Output: host physical address
 * Control Flow of translating Guest Virtual to Host Physical:
-  1. Accessing Guest Virtual Address causes a page fault
-     * User -> Guest OS
-  2. Walk page table in software to identify Guest Physical Address
-  3. If required, allocate “guest physical page” for faulting address
-     * Guest OS -> User
-     * When user tries to access address, it will fault again to hypervisor
-     * User -> Hypervisor
-  4. Translate Guest Physical Address to Host Physical Address
-    * Do this for each guest physical address involved in page table
-  5. Allocate Page for Host Physical Address if required
-  6. Update shadow page table
-  7. Install entry in TLB
-    * Hypervisor -> User
-* Steps 5, 6 together are called “hidden page faults”: the VM doesn’t know what is happening
-* Hidden page faults are the main overhead of memory virtualization
+  1. Miss in TLB, go to shadow page table, find entry missing (this means the guest page table is missing an entry for this guest virtual address)
+  2. Trap to hypervisor
+  3. Trap to guest OS (simulate a page fault to guest OS)
+  4. Guest OS tries to install new entry in its page table (which is read-only)
+  5. Trap to hypervisor, install corresponding entry in shadow page table
+  6. Install corresponding entry in guest page table
+  7. Return to guest OS
+  8. Return to hypervisor
+  9. Return to guest application
 * Every time the guest tries to update its own page table, we must trap
 into the hypervisor
     * The shadow page table must be updated
