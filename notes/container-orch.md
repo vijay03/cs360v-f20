@@ -28,7 +28,6 @@
 ### Kubernetes
 * Based on internal Google system called [Borg](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf)
 * Started in 2014
-* Around for only three years, already an industry standard
 * Kubernetes encourages the "micro-services" approach:
     * Break your application down into small services that can be deployed at different machines
     * This has higher scalability and reliability than all code running as part of one stack on a single machine
