@@ -161,9 +161,9 @@ on the right side of the line. If you are not sure about something,
 
 1. All projects/assignments must be submitted in class the day they
 are due.
-2. For each day a project/assignment is late, you lose 10% of the
+2. For each day a project/assignment is late, you lose 5% of the
   points for that project. So if you submit two days after the
-  deadline, your maximum points on that project will be 80%.
+  deadline, your maximum points on that project will be 90%.
 3. In this class, it is always better to do the work (even late) than not
 do it at all.
 4. If you become ill: contact the instructor. A medical note is
