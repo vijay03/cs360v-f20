@@ -39,7 +39,9 @@ You need access to kvm module for this project. So please use one of the followi
 You can also enable qemu-kvm on your personal laptops / computers and work on the project.
 
 ### Using a server for the project
-There are accounts created for all the groups on a server named "thoothukudi-lom". The thoothukudi-lom sits behind a gateway server called "pig". If you want to use thoothukudi-lom for the project, please follow the steps below:
+There are accounts created for all the groups on a server named "thoothukudi-lom". The projects will run much faster on the server as compared to the VM. So if you are not able to use the VM on the lab machines or you are finding the VMs to be too slow, you can use the server.
+
+The thoothukudi-lom sits behind a gateway server called "pig". If you want to use thoothukudi-lom for the project, please follow the steps below:
 1. add the following lines to the ~/.ssh/config file of the machine which you will use to ssh into the server:
 ```
 Host thoothukudi-lom
@@ -47,7 +49,7 @@ Host thoothukudi-lom
 ```
 2. Log in to the server using the following command each time:
 ```
-$ ssh cs378-<group_name>@thoothukudi-lom
+$ ssh cs378-<groupname>@thoothukudi-lom
 ```
 3. After you log in, you should be able to clone the project in the usual way, and run it without any VM.
 
