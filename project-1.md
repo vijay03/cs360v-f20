@@ -6,6 +6,7 @@
 3. Added commands to setup GDB on 09/30
 4. Added hints and details for Mapping in the guest bootloader and kernel on 10/01
 5. Added a section for using VM for the project on 10/04
+6. Added a section to use the server for the project on 10/16
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
@@ -36,6 +37,21 @@ You need access to kvm module for this project. So please use one of the followi
 6. thurston-howell-iii
 
 You can also enable qemu-kvm on your personal laptops / computers and work on the project.
+
+### Using a server for the project
+There are accounts created for all the groups on a server named "thoothukudi-lom". The thoothukudi-lom sits behind a gateway server called "pig". If you want to use thoothukudi-lom for the project, please follow the steps below:
+1. add the following lines to the ~/.ssh/config file of the machine which you will use to ssh into the server:
+```
+Host thoothukudi-lom
+    ProxyCommand ssh cs378@pig.csres.utexas.edu -W %h:%p
+```
+2. Log in to the server using the following command each time:
+```
+$ ssh cs378-<group_name>@thoothukudi-lom
+```
+3. After you log in, you should be able to clone the project in the usual way, and run it without any VM.
+
+Please not that you *do not* need to create ssh key on the thoothukudi server. I have pre-created the ssh keys for all the accounts and added to your respective repositories. You should be able to clone the project directly as soon as you log in to the server. Also, since the thoothukudi-lom server sits behind the pig gateway, your keys need to be added to the pig server as well. For that, I have added all the keys that you have sent me so far in the pig server. So you can use any of the machines whose keys you have sent me till now to ssh into thoothukudi-lom. If you want to use a different machine to ssh into thoothukudi-lom, please send me the ssh public key of that machine.
 
 ### Using a Virtual Machine for the project
 If you want to use a Virtual Machine for the project, please follow the steps mentioned [here](https://github.com/vijay03/cs378-f19/blob/master/project-1-vm-setup.md) for setting up the VM.
