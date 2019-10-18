@@ -55,6 +55,13 @@ $ ssh cs378-<groupname>@thoothukudi-lom
 
 Please not that you *do not* need to create ssh key on the thoothukudi server. I have pre-created the ssh keys for all the accounts and added to your respective repositories. You should be able to clone the project directly as soon as you log in to the server. Also, since the thoothukudi-lom server sits behind the pig gateway, your keys need to be added to the pig server as well. For that, I have added all the keys that you have sent me so far in the pig server. So you can use any of the machines whose keys you have sent me till now to ssh into thoothukudi-lom. If you want to use a different machine to ssh into thoothukudi-lom, please send me the ssh public key of that machine.
 
+2 more servers have been set up for the project.
+1. erode-lom server. The setup for this is the same as the thoothukudi-lom server. So just replace "thoothukudi-lom" with "erode-lom" in setting up this server.
+2. udipi server. In order to log in to this server, you don't need to modify your ~/.ssh/config file. You can directly log in using the command:
+```
+$ ssh cs378-<groupname>@udipi.csres.utexas.edu
+```
+
 ### Using a Virtual Machine for the project
 If you want to use a Virtual Machine for the project, please follow the steps mentioned [here](https://github.com/vijay03/cs378-f19/blob/master/project-1-vm-setup.md) for setting up the VM.
 
