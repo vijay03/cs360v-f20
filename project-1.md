@@ -211,6 +211,14 @@ Once this is completed, you need to modify the `bc_pgfault()` amd `flush_block()
 
 Finally, you will need to extend the `sys_ipc_try_send()` to detect whether the environment is of type `ENV_TYPE_GUEST` or not, and you also need to implement the `ept_page_insert()` function.
 
+The workflow (and hints) for the ipc_* functions is as follows:
+1. `ipc_host_send()` checks whether pg is NULL. If it is, it sets the pg to UTOP. Then this function gets the gpa corresponding to pg and does a vmcall to VMX_VMCALL_IPCSEND by setting the corresponding registers in the guest.
+2. `ipc_host_recv()` also checks whether pg is NULL. If it is, it sets the pg to UTOP. Then it allocates a page at pg and does a vmcall to VMX_VMCALL_IPCRECV with corresponding registers set at the guest.
+3. `handle_vmcall(): VMX_VMCALL_IPCSEND` loads the values from the trapframe registers. Then it ensures that the destination environment is HOST FS. If the destination environment is not HOST FS, then this function returns E_INVAL. Now, this function traverses all the environments, and sets the `to_env` to the environment ID corresponding to ENV_TYPE_FS at the host. After this is done, it converts the gpa to hva and then calls `sys_ipc_try_send()`
+4. `handle_vmcall(): VMX_VMCALL_IPCRECV` just calls `sys_ipc_recv()`, after incrementing the program counter.
+5. `sys_ipc_try_send()` checks whether the guest is sending a message to the host or whether the host is sending a message to the guest. If the curenv type is GUEST and the destination va is below UTOP, it means that the guest is sending a message to the host and it should insert a page in the host's page table. If the dest environment is GUEST and the source va is below UTOP, it means that the host is sending a message to the guest and it should insert a page in the EPT. Finally, at the end of this function, if the dest environment is GUEST, then the rsi register of the trapframe should be set with 'value'.
+6. `ept_page_insert()` uses `ept_lookup_gpa` to traverse the EPT and insert a page if not present.
+
 Once these steps are complete, you should have a fully running JOS-on-JOS.
 
 ### Grading
