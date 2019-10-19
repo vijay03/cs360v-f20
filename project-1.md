@@ -8,6 +8,7 @@
 5. Added a section for using VM for the project on 10/04
 6. Added a section to use the server for the project on 10/16
 7. Added script for gradeproject to check implementation on 10/19
+8. Added hints and workflow for the ipc_* functions on 10/19
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
