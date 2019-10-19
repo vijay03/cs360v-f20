@@ -216,7 +216,9 @@ Once these steps are complete, you should have a fully running JOS-on-JOS.
 ### Grading
 Your code will be tested on proper functioning of extended page table mapping, vmlaunch and resume and correct handling of vmcalls during vm exit.
 
-Grade Scripts can be found here. Download both executables and run `python gradeproject.py` from the project-1 directory.
+Grade Scripts can be found [here](https://github.com/vijay03/cs378-f19/blob/master/gradeproject.py) and [here](https://github.com/vijay03/cs378-f19/blob/master/gradelib.py). Download both executables and run `python gradeproject.py` from the project-1 directory.
+
+Note: This is just a script for your reference - the score that the script generates might not be your final grade for the project. The script will be most helpful in testing sys_ept_map() functionality and will be able to catch some of the problems that occur later on in the project due to incorrect mapping code.
 
 ### Hints
 All the functions to be implemented contain hints on how to implement the respective functions as comments in the function names. So please pay attention to the commented code as well.
