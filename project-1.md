@@ -7,6 +7,7 @@
 4. Added hints and details for Mapping in the guest bootloader and kernel on 10/01
 5. Added a section for using VM for the project on 10/04
 6. Added a section to use the server for the project on 10/16
+7. Added script for gradeproject to check implementation on 10/19
 
 ### Introduction
 This project will guide you through writing a basic paravirtual hypervisor. We will use the JOS operating system running on a qemu emulator. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for getting an overview of JOS and useful commands of QEMU. The main topics covered in this project are: bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file.
@@ -211,6 +212,11 @@ Once this is completed, you need to modify the `bc_pgfault()` amd `flush_block()
 Finally, you will need to extend the `sys_ipc_try_send()` to detect whether the environment is of type `ENV_TYPE_GUEST` or not, and you also need to implement the `ept_page_insert()` function.
 
 Once these steps are complete, you should have a fully running JOS-on-JOS.
+
+### Grading
+Your code will be tested on proper functioning of extended page table mapping, vmlaunch and resume and correct handling of vmcalls during vm exit.
+
+Grade Scripts can be found here. Download both executables and run `python gradeproject.py` from the project-1 directory.
 
 ### Hints
 All the functions to be implemented contain hints on how to implement the respective functions as comments in the function names. So please pay attention to the commented code as well.
