@@ -91,8 +91,8 @@ $ make install
 ```
 After installing python3.4 and gdb7.7, open $HOME/.bashrc and add the following lines:
 ```
-export $LD_LIBRARY_PATH=/stage/public/ubuntu64/lib:$HOME/python3.4/lib
-export $PATH=$HOME/gdb7.7/usr/bin:$PATH
+export LD_LIBRARY_PATH=/stage/public/ubuntu64/lib:$HOME/python3.4/lib
+export PATH=$HOME/gdb7.7/usr/bin:$PATH
 ```
 Finally, open (create if doesn't exist) $HOME/.gdbinit and add the following line:
 ```
