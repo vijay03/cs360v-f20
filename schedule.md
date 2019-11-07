@@ -20,7 +20,7 @@
 | 10/29 Tue | **No class - SOSP** | | |  |
 | 10/31 Thu | **No class - SOSP** | | |  |
 | 11/05 Tue | Cntr: Lightweight OS Containers | [ATC 18 paper](https://www.usenix.org/conference/atc18/presentation/thalheim) | |  |
-| 11/07 Thu | Serverless computing: the basics  | [Notes](notes/serverless.md) | |  |
+| 11/07 Thu | Serverless computing: the basics  | | [Notes](notes/serverless.md) | | 
 | 11/12 Tue | Guest lecture from [Prof. Chris Rossbach](https://www.cs.utexas.edu/~rossbach/)| | |  |
 | 11/14 Thu | | | |  |
 | 11/19 Tue | | | |  |
