@@ -19,7 +19,7 @@
 | 10/24 Thu | Unikernels: Library OS for the cloud  | [ASPLOS 13 paper](http://mort.io/publications/pdf/asplos13-unikernels.pdf)  | |  |
 | 10/29 Tue | **No class - SOSP** | | |  |
 | 10/31 Thu | **No class - SOSP** | | |  |
-| 11/05 Tue | Cntr: Lightweight OS Containers | [ATC 18 paper](https://www.usenix.org/conference/atc18/presentation/thalheim) | |  |
+| 11/05 Tue | Cntr: Lightweight OS Containers + Slacker | [ATC 18 paper](https://www.usenix.org/conference/atc18/presentation/thalheim), [FAST 16 Slacker](https://www.usenix.org/node/194431) | |  |
 | 11/07 Thu | Serverless computing: the basics  | | [Notes](notes/serverless.md) | | 
 | 11/12 Tue | Guest lecture from [Prof. Chris Rossbach](https://www.cs.utexas.edu/~rossbach/)| | |  |
 | 11/14 Thu | | | |  |
