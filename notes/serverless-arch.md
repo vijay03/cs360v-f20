@@ -1,5 +1,8 @@
 * Kubeless
   * Functions are represented as Custom Resource Definitions (CRD)
+    * A custom resource is an extension of Kubernetes API (new kind of
+      object)
+    * A CRD groups together custom resources of one type
   * Serverless function deployed using ConfigMaps
   * Controller running as a service, checks for changes to
     ThirdPartyResource
