@@ -1,6 +1,5 @@
 * Kubeless
-  * Kubernetes ThirdPartyResource object provides CRUD
-    * All serverless functions are part of this 
+  * Functions are represented as Custom Resource Definitions (CRD)
   * Serverless function deployed using ConfigMaps
   * Controller running as a service, checks for changes to
     ThirdPartyResource
