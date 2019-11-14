@@ -15,6 +15,8 @@
       * Function is triggered when event is published
 
 * Reading
-  * [Kubeless Architecture](https://github.com/kubeless/kubeless/blob/master/docs/architecture.md)
+  * [Kubeless
+    Architecture](https://github.com/kubeless/kubeless/blob/master/docs/architecture.md)
+  * [Kubernetes Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
   * See video middle part: [Serverless on Kubernetes with Kubeless [A]
     ](https://www.youtube.com/watch?v=1QZ6x_8h8qY)
