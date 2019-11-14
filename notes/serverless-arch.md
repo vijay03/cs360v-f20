@@ -3,9 +3,8 @@
     * A custom resource is an extension of Kubernetes API (new kind of
       object)
     * A CRD groups together custom resources of one type
+    * Controller running as a service, checks for changes to CRD
   * Serverless function deployed using ConfigMaps
-  * Controller running as a service, checks for changes to
-    ThirdPartyResource
   * Kafka/Zookeeper running to handle events
   * Init container used to handle dependencies (such as runtime for function)
   * kubeless deploys the controller, Kafka to initialize
