@@ -1,6 +1,6 @@
 * Kubeless
   * Kubernetes ThirdPartyResource object provides CRUD
-    * All serverless functions are part of this ThirdPartyResource
+    * All serverless functions are part of this 
   * Serverless function deployed using ConfigMaps
   * Controller running as a service, checks for changes to
     ThirdPartyResource
@@ -16,5 +16,6 @@
       * Function is triggered when event is published
 
 * Reading
+  * [Kubeless Architecture](https://github.com/kubeless/kubeless/blob/master/docs/architecture.md)
   * See video middle part: [Serverless on Kubernetes with Kubeless [A]
     ](https://www.youtube.com/watch?v=1QZ6x_8h8qY)
