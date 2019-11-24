@@ -1,0 +1,18 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdftex 2016.5.22)  3 OCT 2019 15:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**container-nc.md
+(./container-nc.md
+./container-nc.md:1: You can't use `macro parameter character #' in vertical mo
+de.
+l.1 #
+     # Kernel Namespaces
+? 
+./container-nc.md:1: Emergency stop.
+l.1 #
+     # Kernel Namespaces
+End of file on the terminal!
+
+./container-nc.md:1:  ==> Fatal error occurred, no output PDF file produced!

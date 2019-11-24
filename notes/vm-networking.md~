@@ -1,0 +1,98 @@
+* The packet processing game:
+    * 10 Gbps delivers 14.8M packets per second (assuming 64 byte packets and 20 byte pre-amble)
+    * That gives us 67 ns to process a single packet
+    * 67 ns is about 200 cycles on a 3 Ghz processor -- not a lot
+    * For comparison: 
+        * A cache miss is 32 ns
+        * L2 cache access 4 ns
+        * L3 cache access 8 ns
+        * Atomic lock operation : 8 ns
+        * Syscall: 40 ns
+        * TLB miss: several cache misses
+    * Need to batch and process packets
+    * What to avoid:
+        * A context switch: > 1000 ns
+        * A page fault: > 1000 ns 
+* **Data Plane Development Kit (DPDK)**
+* Open-source project with contributions from Intel and others
+    * C code (GCC 4.5.X or later)
+    * Linux kernel 2.6.34 or later
+    * With kernel boot option isolcpus
+* Set of user-space libraries for fast packet processing
+    * Can handle 11x the traffic of the Linux kernel! 
+* Lightweight, low level, performance driven framework
+* All traffic bypasses the kernel
+* Started with Intel x86, now supports other architectures like IBM Power 8
+* Poll Mode Driver (PMD) per Hardware NIC
+    * Support for RX/TX (Receive and Transmit)
+    * Mapping PCI memory
+    * Mapping user memory onto NIC
+    * Managing hardware support
+    * Implemented as a user space pthread
+    * PMD drivers are non pre-emptive, not thread-safe
+    * Threads communicate using librte_ring: lockless queue
+* User space libraries
+    * Initialize and use PMD
+    * Provide threads (based on pthread)
+    * Memory management
+        * Used with Huge Pages (2 MB, 1 GB)
+    * Hashing, scheduler, pipelining etc
+* All resources initialized at the start 
+* Implementation Tricks:
+    * Don’t use linked lists
+    * Use arrays instead
+* What does a basic forwarding example do?
+    * DPDK Init
+    * Get all available nics
+    * Initialize packet buffers (create mem pool)
+    * Initialize ports
+* PMD loop for forwarding:
+    * Get burst of packets from first port in port-pair
+    * Send packets to second port in port-pair
+    * Free unsent packets
+    * Do this in a loop
+* RTE Ring
+    * Fixed sized, "lockless", queue ring
+    * Non Preemptive.
+    * Supports multiple/single producer/consumer, and bulk actions.
+    * Uses:
+        * Single array of pointers.
+        * Head/tail pointers for both producer and consumer (total 4 pointers).
+    * To enqueue (Just like dequeue):
+        * Until successful:
+            * Save in local variable the current head_ptr.
+            * head_next = head_ptr + num_objects
+            * CAS the head_ptr to head_next
+        * Insert objects.
+        * Until successful:
+            * Update tail_ptr = head_next + 1 when tail_ptr == head_ptr
+    * Analysis:
+        * Light weight.
+        * In theory, both loops are costly.
+        * In practice, as all threads are cpu bound, the amortized cost is low for the first loop, and very unlikely at the second loop.
+* RTE Mempool
+    * Spread objects across different channels of the DRAM controller (different channels can be concurrently accessed)
+    * Maintain a per-core cache, send requests in bulk to mempool ring
+* Performance Evaluation:
+    * DPDK can forward 22 M pps (L3 forwarding, NIC port to NIC port)
+    * DPDK can forward 11 M pps (PHY-OVS-PHY)
+    * DPDK can forward 2 M pps (NIC to VM to OVS to VM to NIC)
+    * 4X40Gb ports
+    * E5-2695 V4 2.1Ghz Processor
+    * 16X1GB Huge Pages, 2048X2MB Huge Pages
+* **Open vSwitch (OvS)**
+    * Software switch used to form network of virtualized machines
+    * Ethernet switching done in the hypervisor
+    * Critical part of software-defined networking (implements OpenFlow)
+    * User-space controller, fast path in kernel
+    * DPDK is used to accelerate OvS
+    * The first packet of a new flow goes to user-space
+        * User space decides on a rule to handle this flow
+        * The rule is cached in the kernel
+        * Further packets of flow just go through the kernel
+    * Database used to persistently store rules (ovsdb-server)
+        * Communicates with user space component via RPC
+* Reading:
+    * Introduction to DPDK: [https://www.slideshare.net/kerneltlv/introduction-to-dpdk](https://www.slideshare.net/kerneltlv/introduction-to-dpdk) 
+    * [http://dpdk.org/doc/guides-16.04/prog_guide/mempool_lib.html](http://dpdk.org/doc/guides-16.04/prog_guide/mempool_lib.html)
+    * Understanding the Performance of DPDK as a Computer Architect: [https://www.youtube.com/watch?v=VdskkbCzglE](https://www.youtube.com/watch?v=VdskkbCzglE) 
