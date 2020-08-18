@@ -1,6 +1,6 @@
-## CS 378 Virtualization (Fall 2019)
+## CS 378 Virtualization (Fall 2020)
 
-Welcome to CS 378 Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has a significant project component to be completed over the course of the semester. *Do not take this course if you are not comfortable reading, editing, and writing code*. 
+Welcome to CS 378 Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has two significant project components to be completed over the course of the semester.
 
  This course will introduce students to
   a range of exciting topics including:
@@ -19,38 +19,36 @@ Welcome to CS 378 Virtualization for undergrads. This is a course designed to ex
 
 Aside from teaching you the concepts behind virtualization, this course is meant to get you familiar with the commonly used tools and software. You should get used to using virtual machines, and containers. You will gain more experience with Git, and with real-world code bases.
 
-**Piazza Link: [piazza.com/utexas/fall2019/cs378virtualization](http://piazza.com/utexas/fall2019/cs378virtualization)** 
+**Piazza Link: [piazza.com/utexas/fall2020/cs360v](piazza.com/utexas/fall2020/cs360v)** 
 
-**Canvas Link: [https://utexas.instructure.com/courses/1254479](https://utexas.instructure.com/courses/1254479)** 
+**Canvas Link: [https://utexas.instructure.com/courses/1290530](https://utexas.instructure.com/courses/1290530)** 
 
-**Class Timing and Location**: TuTh 3:30 pm - 5:00pm in **GDC 1.304**
+**Class Timing and Location**: TuTh 2 pm - 3:30pm on **Zoom**
 
-**[Schedule](https://github.com/vijay03/cs378-f19/blob/master/schedule.md)**
+**[Schedule](https://github.com/vijay03/cs360v-f20/blob/master/schedule.md)**
 
 **Instructor: [Vijay Chidambaram](https://www.cs.utexas.edu/~vijay/)**
 
 Email: vijayc@utexas.edu
 
-Office hours: 1:30-2:30 PM CST Monday and Wednesday, GDC 6.436
+Office hours: 2-3 PM CST Friday, **Zoom**
 
-**TA: [Rohan Kadekodi](https://www.cs.utexas.edu/~rak/)**
+**TA: [Soujanya Ponnapalli](https://www.cs.utexas.edu/~soujanya/)**
 
-Email: rak@cs.utexas.edu
+Email: soujanya@cs.utexas.edu
 
-Office hours: 5-6 PM CST Tuesday and Thursday (right after class), GDC 6.440
+Office hours: TBD
 
-**TA/Proctor: Juthi Paul**
+**TA: [Aashaka Shah](https://aashaka.github.io/)**
 
-Email: juthi_paul@utexas.edu
+Email: aashaka@cs.utexas.edu
 
-Office hours: 3:30-4:30 PM CST Wednesday in GDC Basement, Desk 5
+Office hours: TBD 
 
 ### Grading 
 
-**20%** Midterm-1 <br>
-**20%** Midterm-2 <br>
-**30%** Project: implementing your own hypervisor <br>
-**30%** Project: contributing to an open-source repository related to virtualization <br>
+**50%** Project: implementing your own hypervisor <br>
+**50%** Project: contributing to an open-source repository related to virtualization <br>
 
 ### Extra Credit
 
@@ -61,24 +59,9 @@ You can earn upto **1%** extra credit if your patches get accepted to any open-s
 
 Note that these extra-credit activities will also serve you well in hunting for jobs or internships: getting a patch accepted in a project is impressive.
 
-### Exams
+### Quizzes
 
-There will be two midterms. There will not be a final exam.
-
-Midterm 1: **Oct 10th** (in-class, [practice
-questions](midterm1-practice-questions.md)) <br>
-Midterm 2: **Nov 26th** (tentatively) <br>
-
-Exams will be based on *application* of material learnt in class, and
-will not require remembering details such as which register is used
-for which function. You will be allowed one A4 sheet of paper on which
-you can bring notes for the exam.
-
-Laptops, tablets, and ereaders are **banned** from exams. You should
-not need them in an exam, and they are far too flexible as
-communication devices to make enforcement of non-communication
-policies enforceable. Any use of a communication device for any reason
-in the exam room will earn an automatic zero on the exam.
+There will be ungraded quizzes throughout the course to cement your understanding of the material.
 
 ### Projects
 
@@ -102,9 +85,7 @@ in the exam room will earn an automatic zero on the exam.
 
 ### Deadlines (tentative)
 
-**Oct 10** Midterm 1 <br>
-**Oct 22** Project 1 due <br>
-**Nov 26** Midterm 2 <br>
+**Oct 25** Project 1 due <br>
 **Dec 3-5** In-class presentations about open-source contributions <br>
 **Dec 12** Report due about open-source contributions <br>
 
@@ -132,7 +113,6 @@ instructor.</p>
 #### Collaboration 
 
 1. The students are encouraged to do the projects in groups of two or three.
-2. All exams are done individually, with absolutely no collaboration.
 3. Each student must present.
 4. I strongly encourage you to discuss the projects and assignments with
 anyone you can. That's the way good science happens. But all work and
