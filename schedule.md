@@ -21,7 +21,7 @@
 | 10/29 Thu | Serverless computing: the basics  | | [Notes](notes/serverless.md) | | 
 | 11/03 Tue | **No class - OSDI** | | |  |
 | 11/05 Thu | **No class - OSDI** | | |  |
-| 11/10 Tue | Guest lecture from [Prof. Chris Rossbach](https://www.cs.utexas.edu/~rossbach/)| | |  |
+| 11/10 Tue | TBD | | |  |
 | 11/12 Thu | Serverless Architecture + Serverless Computing: One Step Forward, Two Steps Back | [CIDR19](http://cidrdb.org/cidr2019/papers/p119-hellerstein-cidr19.pdf) | [Notes](notes/serverless-arch.md), [Notes (Sama Ziki)](notes/arch-sama.md) |  |
 | 11/17 Tue | From Laptop to Lambda: Outsourcing Everyday Jobs to Thousands of Transient Functional Containers | [ATC19](https://cs.stanford.edu/~matei/papers/2019/usenix_atc_gg.pdf) | [Notes (Sama Ziki)](notes/cidr19.md) |  |
 | 11/19 Thu | GG + Review  | | [Notes (Sama Ziki)](notes/gg.md) |  |
