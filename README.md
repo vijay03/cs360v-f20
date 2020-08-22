@@ -79,7 +79,7 @@ There will be ungraded quizzes throughout the course to cement your understandin
   proposal approved, and then present on what they did at the end of
   the semester. You are encouraged to add a useful feature to an
   open-source project (and potentially get it merged with the code
-  base).</p>
+  base). More details [here](https://github.com/vijay03/cs360v-f20/blob/master/project-open-source.md)</p>
 
 <p>More details about the projects will be added shortly.</p>
 
