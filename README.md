@@ -37,13 +37,13 @@ Office hours: 2-3 PM CST Friday, **Zoom**
 
 Email: soujanya@cs.utexas.edu
 
-Office hours: TBD
+Office hours: Monday 5-6 PM CST, **Zoom**
 
 **TA: [Aashaka Shah](https://aashaka.github.io/)**
 
 Email: aashaka@cs.utexas.edu
 
-Office hours: TBD 
+Office hours: Wednesday 5-6 PM CST, **Zoom** 
 
 ### Grading 
 
