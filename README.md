@@ -71,7 +71,7 @@ There will be ungraded quizzes throughout the course to cement your understandin
 <p>The first project will involve building parts of your own
   hypervisor. You will need to know the basics of operating systems,
   C, and assembly to complete this project. README for project one:
-  https://github.com/vijay03/cs378-f19/blob/master/project-1.md </p>
+  https://github.com/vijay03/cs360v-f20/blob/master/project-1.md </p>
 
 <p>The second project is open-ended, and will involve adding a new
   feature to any open-source project related to virtualization and
@@ -79,7 +79,8 @@ There will be ungraded quizzes throughout the course to cement your understandin
   proposal approved, and then present on what they did at the end of
   the semester. You are encouraged to add a useful feature to an
   open-source project (and potentially get it merged with the code
-  base). More details [here](https://github.com/vijay03/cs360v-f20/blob/master/project-open-source.md)</p>
+  base). More details here: https://github.com/vijay03/cs360v-f20/blob/master/project-open-source.md. 
+</p>
 
 <p>More details about the projects will be added shortly.</p>
 
