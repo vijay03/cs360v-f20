@@ -20,3 +20,4 @@ I'll add more projects to this list as I find them.
 4. [Containerd](https://github.com/containerd/containerd)
 5. [Guest Compute Service for Linux Hyper-V Container](https://github.com/Microsoft/opengcs)
 6. [Golang interface for using the Windows Host Compute Service (HCS) to launch and manage Windows Containers](https://github.com/Microsoft/hcsshim)
+7. [See "good first issues" on the Popper Project](https://github.com/getpopper/popper/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
