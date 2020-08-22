@@ -19,7 +19,7 @@ Welcome to CS 378 Virtualization for undergrads. This is a course designed to ex
 
 Aside from teaching you the concepts behind virtualization, this course is meant to get you familiar with the commonly used tools and software. You should get used to using virtual machines, and containers. You will gain more experience with Git, and with real-world code bases.
 
-**Piazza Link: [piazza.com/utexas/fall2020/cs360v](piazza.com/utexas/fall2020/cs360v)** 
+**Piazza Link: [piazza.com/utexas/fall2020/cs360v](https://piazza.com/utexas/fall2020/cs360v)** 
 
 **Canvas Link: [https://utexas.instructure.com/courses/1290530](https://utexas.instructure.com/courses/1290530)** 
 
