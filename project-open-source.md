@@ -8,7 +8,7 @@ wanted" tag.
 
 You can also politely email the developers to ask about
 appropriate projects: the last version of the class had success with
-this approach. There are some awesome developers out there :) 
+this approach. There are some awesome developers out there :) Cc me on initial emails with developers.
 
 ## Recommended Open-Source Projects
 
