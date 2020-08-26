@@ -7,10 +7,9 @@ is a project-intensive course.
   you need to pay attention in class. There are no textbooks for this course.
 
 * Grading:
-    * 20% Midterm-1
-    * 20% Midterm-2
-    * 30% Project: implementing your own hypervisor
-    * 30% Project: contributing to an open-source repository related to virtualization
+    * No midterms or finals!
+    * 50% Project: implementing your own hypervisor
+    * 50% Project: contributing to an open-source repository related to virtualization
     
 * There are two projects in this class: an implementation-based
   project and an open-source project. Most of the learning will come
@@ -40,6 +39,5 @@ is a project-intensive course.
     
 * The main force driving progress in virtualization is **economics**: virtualization allows better utilization of hardware for the provider, and lower costs for the user
     
-    
-
+  
     
