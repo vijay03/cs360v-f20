@@ -1,4 +1,4 @@
-## CS 378 Virtualization (Fall 2020)
+## CS 360V Virtualization (Fall 2020)
 
 Welcome to CS 378 Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has two significant project components to be completed over the course of the semester.
 
@@ -62,6 +62,16 @@ Note that these extra-credit activities will also serve you well in hunting for 
 ### Quizzes
 
 There will be ungraded quizzes throughout the course to cement your understanding of the material.
+
+### Reading
+
+These books are not required, but are useful for the class. The same information is also available freely online.
+
+**Hardware and Software Support for Virtualization**
+Edouard Bugnion, Jason Nieh, Dan Tsafrir, and Margaret Martonosi
+
+https://search.lib.utexas.edu/permalink/01UTAU_INST/be14ds/alma991057986159206011 (Available for free in the UT Library)
+https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?docID=4815368
 
 ### Projects
 
