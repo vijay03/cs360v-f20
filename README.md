@@ -67,7 +67,7 @@ There will be ungraded quizzes throughout the course to cement your understandin
 
 These books are not required, but are useful for the class. The same information is also available freely online.
 
-**Hardware and Software Support for Virtualization**
+**Hardware and Software Support for Virtualization**<br>
 Edouard Bugnion, Jason Nieh, Dan Tsafrir, and Margaret Martonosi
 
 https://search.lib.utexas.edu/permalink/01UTAU_INST/be14ds/alma991057986159206011 (Available for free in the UT Library)
