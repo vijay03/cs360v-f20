@@ -88,3 +88,5 @@
       Slides](https://www.csd.uoc.gr/~hy428/reading/qemu-internals-slides-may6-2014.pdf)
       by Manolis Marazakis at FORTH-ICS
     * [Intel’s Virtualization Extensions (VT-x)](https://www.cs.dartmouth.edu/~sergey/cs258/2014/TorreyGuestLecture-Hypervors.pdf) by Jacob Torrey
+    * [Analysis of the Intel Pentium’s Ability to Support a
+Secure Virtual Machine Monitor, USENIX Security 2009](https://www.usenix.org/legacy/publications/library/proceedings/sec2000/full_papers/robin/robin.pdf)
