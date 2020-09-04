@@ -85,6 +85,7 @@ gdb7.7 requires python3.4 to run. Download and install python3.4 as given below:
 ```
 $ wget https://www.python.org/ftp/python/3.4.5/Python-3.4.5rc1.tar.xz
 $ tar xf Python-3.4.5rc1.tar.xz
+$ cd Python-3.4.5rc1
 $ ./configure --prefix=$HOME/python3.4 --enable-shared --with-threads
 $ make
 $ make install
