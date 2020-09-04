@@ -74,7 +74,7 @@ The standard version of gdb does not correctly handle the transition to long mod
 #### Installation
 If you are using the gilligan lab machines, install gdb using following command:
 ```
-$ dpkg -x gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb $HOME/gdb_7.7
+$ dpkg -x gdb_7.7.1-0ubuntu5_14.04.2_amd64.deb $HOME/gdb_7.7
 GDB executable can be found at $HOME/gdb_7.7/usr/bin
 ```
 If you are using personal machines, install gdb using following command:
