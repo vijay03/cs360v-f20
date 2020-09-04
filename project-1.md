@@ -79,7 +79,7 @@ GDB executable can be found at $HOME/gdb_7.7/usr/bin
 ```
 If you are using personal machines, install gdb using following command:
 ```
-$ sudo dpkg -i gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb
+$ sudo dpkg -i gdb_7.7.1-0ubuntu5_14.04.2_amd64.deb
 ```
 gdb7.7 requires python3.4 to run. Download and install python3.4 as given below:
 ```
