@@ -31,19 +31,19 @@ Aside from teaching you the concepts behind virtualization, this course is meant
 
 Email: vijayc@utexas.edu
 
-Office hours: 2-3 PM CST Friday, **Zoom**
+Office hours: 2-3 PM CST Friday, **[Zoom](https://utexas.zoom.us/j/93495500868)**
 
 **TA: [Soujanya Ponnapalli](https://www.cs.utexas.edu/~soujanya/)**
 
 Email: soujanya@cs.utexas.edu
 
-Office hours: Monday 5-6 PM CST, **https://utexas.zoom.us/j/96718513620**
+Office hours: Monday 5-6 PM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)**
 
 **TA: [Aashaka Shah](https://aashaka.github.io/)**
 
 Email: aashaka@cs.utexas.edu
 
-Office hours: Wednesday 5-6 PM CST, **https://utexas.zoom.us/j/96718513620** 
+Office hours: Wednesday 5-6 PM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)** 
 
 ### Grading 
 
