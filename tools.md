@@ -54,8 +54,8 @@ Below we post patched Ubuntu packages.
 
 </a><ul><a name="gdb">
 </a><li><a name="gdb"> amd64: </a><ul><a name="gdb">
-     </a><li><a name="gdb"></a><a href="gdb_7.2-1ubuntu11jos_amd64.deb">gdb 7.2</a>.  </li>
-     <li><a href="gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb">gdb 7.7.1</a> (Ubuntu 14.04). </li>
+     </a><li><a name="gdb"></a><a href="http://www.cs.utexas.edu/~vijay/cs378-f17/projects/gdb_7.2-1ubuntu11jos_amd64.deb">gdb 7.2</a>.  </li>
+     <li><a href="http://www.cs.utexas.edu/~vijay/cs378-f17/projects/gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb">gdb 7.7.1</a> (Ubuntu 14.04). </li>
 </ul>
 gdb-multiarch is not required on amd64.
 </li></ul>
@@ -398,7 +398,7 @@ machine state in useful ways.  To enter the monitor, press <kbd>Ctrl-a
 c</kbd> in the terminal running QEMU.  Press <kbd>Ctrl-a c</kbd> again
 to switch back to the serial console.</p>
 
-<p>For a complete reference to the monitor commands, see the <a href="https://qemu.weilnetz.de/doc/qemu-doc.html">QEMU
+<p>For a complete reference to the monitor commands, see the <a href="https://www.qemu.org/docs/master/">QEMU
 manual</a>.  Here are some particularly useful commands:</p>
 
 <dl>
