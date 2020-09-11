@@ -1,10 +1,3 @@
-<html>
-<title>CS 378: Tools</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<script type="text/javascript" src="/util.js">
-</script>
-</head>
 <body data-gr-c-s-loaded="true">
 <h1>CS 378: Tools</h1>
 
@@ -492,6 +485,4 @@ ESI=00000805 EDI=00200000 EBP=eebfdf60 ESP=eebfdf28
 </dl>
 <hr>
 
-
-
-</body></html>
+</body>
