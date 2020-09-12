@@ -1,6 +1,16 @@
 ## Project-1
 
-In this project, you will implement a few exciting pieces of a paravirtual hypervisor. You will use the JOS operating system running on QEMU for this project. Check the [tools page](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/tools.htm) for an overview on JOS and useful commands of QEMU. The project covers bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file. You will work on them over the next 3 or 4 lab assignments.
+In this project, you will implement a few exciting pieces of a paravirtual hypervisor. You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f20/blob/lab1/tools.md) for an overview on JOS and useful commands of QEMU. The project covers bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file. You will work on them over the next 3 or 4 lab assignments.
+
+## Background
+
+This README series contains some background related to project 1. Reading this document will help in understanding what exactly you are implementing on a high level as you work on Project-1.
+
+This README series is broken down into 4 parts:
+1. [Bootloader and Kernel](https://github.com/vijay03/cs378-f19/blob/master/bootloader.md) which will help you in the understanding first part of the project, namely what happens when you boot up your PC (in our case, create or boot the guest).
+2. [Virtual Memory](https://github.com/vijay03/cs378-f19/blob/master/virtual_memory.md) which will help you in understanding the second part - where we transfer the multiboot structure from the host to the guest, for the guest to understand how much memory it is allocated and how much it can use. This part also contains details about segmentation and paging, which are a good background for the project in general.
+3. [environments](https://github.com/vijay03/cs378-f19/blob/master/environments.md) which will help you in understanding what exactly is an environment, and some details about the environment structure which is used in sys_ept_map() and the trapframe structure.
+4. [File system](https://github.com/vijay03/cs378-f19/blob/master/file_system.md) which will help you in understanding the second part of the lab, where we handle vmcalls related to reading and writing of data to a disk.
 
 ## Lab-1
 
@@ -16,14 +26,13 @@ You may use your laptops / computers for this project. Please enable qemu-kvm on
 - the-professor
 - thurston-howell-iii
 
-For lab-1, you will use a virtual machine with Ubuntu 16.04 operating system. Follow the instructions below for:
-1. Setting up a Virtual Machine
-2. Installing Dependencies and
-3. Using GDB
+For lab-1, you will use a virtual machine with Ubuntu 16.04 operating system. Follow the instructions below for
+1. Setting up a VM and other essentials
+2. Running JOS code for project-1
 
-#### 1. Setting up a Virtual Machine
+#### 1. Setting up a Virtual Machine and Other Essentials
 
-1. Download the [VM image](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2) on the CS gilligan machines or your personal laptops (with QEMU and KVM enabled).
+1. Download the [VM image](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2) (8.9 GB) on CS gilligan machines or your personal laptops (with QEMU and KVM enabled).
 ```
 $ wget http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2
 ```
@@ -45,63 +54,17 @@ $ scp -P <port-id> $HOME/.ssh/id_rsa.pub $USER@localhost:~/.ssh/id_rsa.pub
 $ scp -P <port-id> $HOME/.ssh/id_rsa $USER@localhost:~/.ssh/id_rsa
 ```
 
-6. You will now be able to use gitolite and clone the <project-repo> and access it from the VM.
-
-#### 2. Installing Dependencies
-
-Before compiling and running the jos-vmm code, you will need to install Python3.4, gcc-4.8, and the patched gdb_7.7. Please install gcc-4.8 and follow the instructions below to install Python3.4 and gdb7.7
-
-Download and install python3.4 as given below:
-
+6. You will now be able to clone the project code `project-1.tar.gz` and access it from the VM. We will provide additional instructions later on how to use gitolite for project-1.
 ```
-$ wget https://www.python.org/ftp/python/3.4.5/Python-3.4.5rc1.tar.xz
-$ tar xf Python-3.4.5rc1.tar.xz
-$ cd Python-3.4.5rc1
-$ ./configure --prefix=$HOME/python3.4 --enable-shared --with-threads
-$ make
-$ make install
+$ wget http://www.cs.utexas.edu/~soujanya/project-1.tar.gz
+$ tar -zxf project-1.tar.gz
+$ cd project-1
 ```
 
-The standard version of gdb does not correctly handle the transition to long mode during JOS boot, yielding a "Packet too long" error. For debugging 64-bit code on a 32-bit platform, you need both gdb and gdb-multiarch. Below we post patched Ubuntu package [gdb_7.7.1](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb)
+7. Verify that you have gdb 7.7 and gcc 4.8. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/lab1/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` followed by `x`.
 
-If you are using personal machines or running inside the VM, install gdb using following command:
-```
-$ sudo dpkg -i gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb
-```
 
-If you are using the gilligan lab machines, install gdb using following command:
-```
-$ dpkg -x gdb_7.7.1-0ubuntu5~14.04.2_amd64.deb $HOME/gdb_7.7
-GDB executable can be found at $HOME/gdb_7.7/usr/bin
-```
-
-After installing python3.4 and gdb7.7, open $HOME/.bashrc and add the following lines.
-```
-export LD_LIBRARY_PATH=/stage/public/ubuntu64/lib:$HOME/python3.4/lib
-export PATH=$HOME/gdb7.7/usr/bin:$PATH
-```
-
-Finally, open (create if doesn't exist) $HOME/.gdbinit and add the following line:
-```
-set auto-load safe-path /
-```
-
-#### 3. Using GDB
-Open a terminal window, type source ~/.bashrc to set the environment variables LD_LIBRARY_PATH and PATH. Then open (create if doesn't exist) $HOME/.bash_profile and add the line `source ~/.bashrc`.
-```
-$ cd <project-repo>/project-1
-$ make clean
-$ make
-$ make run-vmm-nox-gdb
-```
-
-Open another terminal window and run the following commands to use GDB and to set breakpoints for example.
-```
-$ cd <project-repo>/project-1
-$ gdb
-```
-
-## VMM Bootstrapping and Making a Guest Environment
+#### 2. Bootstrapping JOS VMM
 
 The JOS VMM is launched by a fairly simple program in user/vmm.c. This application calls a new system call to create an environment (similar to a process) that runs in guest mode (sys_env_mkguest). Once the guest is created, the VMM then copies the bootloader and kernel into the guest's physical address space, marks the environment as runnable, and waits until the guest exits.
 
@@ -123,7 +86,7 @@ This will currently panic the kernel because the code to detect vmx and extended
 kernel panic on CPU 0 at ../vmm/vmx.c:65: vmx_check_support not implemented
 ```
 
-### Coding Assignment
+## Coding Assignment (Making a Guest Environment)
 
 The JOS bookkeeping for sys_env_mkguest is already provided for you in kern/syscall.c. You may want to skim this code, as well as the code in kern/env.c to understand how environments are managed. A major difference between a guest and a regular environment is that a guest has its type set to ENV_TYPE_GUEST and has a VmxGuestInfo structure and a vmcs structure associated with it.
 
