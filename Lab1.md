@@ -1,6 +1,6 @@
 ## Project-1
 
-In this project, you will implement a few exciting pieces of a paravirtual hypervisor. You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f20/blob/lab1/tools.md) for an overview on JOS and useful commands of QEMU. The project covers bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. 
+In this project, you will implement a few exciting pieces of a paravirtual hypervisor. You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f20/blob/master/tools.md) for an overview on JOS and useful commands of QEMU. The project covers bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. 
 
 ## Background
 
@@ -62,7 +62,7 @@ $ tar -zxf project-1.tar.gz
 $ cd project-1
 ```
 
-7. Verify that you have gdb 7.7 and gcc 4.8. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/lab1/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` then `x`.
+7. Verify that you have gdb 7.7 and gcc 4.8. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/master/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` then `x`.
 
 
 #### Running JOS VMM
