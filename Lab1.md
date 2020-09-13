@@ -50,8 +50,8 @@ $ ssh -p <port-id> cs378@localhost
 5. Copy your public *and* private ssh keys from the CS lab machine or from your local machine into the VM.
 Alternatively, you can generate a new key-pair on the VM using `ssh-keygen -t rsa`. You should send the public key in the VM to the TAs.
 ```
-$ scp -P <port-id> $HOME/.ssh/id_rsa.pub $USER@localhost:~/.ssh/id_rsa.pub
-$ scp -P <port-id> $HOME/.ssh/id_rsa $USER@localhost:~/.ssh/id_rsa
+$ scp -P <port-id> $HOME/.ssh/id_rsa.pub cs378@localhost:~/.ssh/id_rsa.pub
+$ scp -P <port-id> $HOME/.ssh/id_rsa cs378@localhost:~/.ssh/id_rsa
 ```
 
 6. You will now be able to clone the project code `project-1.tar.gz` and access it from the VM. We will provide additional instructions later on how to use gitolite for project-1.
