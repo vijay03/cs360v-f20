@@ -32,7 +32,7 @@ For lab-1, you will use a virtual machine with Ubuntu 16.04 operating system. Fo
 
 #### Setting up a Virtual Machine and Other Essentials
 
-1. Download the [VM image](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2) (8.8 GB) on CS gilligan machines or your personal laptops (with QEMU and KVM enabled).
+1. Download the compressed [VM image](https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz) (3.4 GB) on CS gilligan machines or your personal laptops (with QEMU and KVM enabled).
 ```
 $ wget http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2
 ```
