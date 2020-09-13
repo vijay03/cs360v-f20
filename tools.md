@@ -1,5 +1,5 @@
 <body data-gr-c-s-loaded="true">
-<h1>CS 378: Tools</h1>
+<h1>CS 360V: Tools</h1>
 
 <p>
 This page gives a brief overview of the JOS environment and useful GDB and QEMU commands.

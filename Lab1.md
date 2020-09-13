@@ -1,6 +1,6 @@
 ## Project-1
 
-In this project, you will implement a few exciting pieces of a paravirtual hypervisor. You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f20/blob/lab1/tools.md) for an overview on JOS and useful commands of QEMU. The project covers bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. 
+In this project, you will implement a few exciting pieces of a paravirtual hypervisor. You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f20/blob/master/tools.md) for an overview on JOS and useful commands of QEMU. The project covers bootstrapping a guest OS, programming extended page tables, emulating privileged instructions, and using hypercalls to implement hard drive emulation over a disk image file. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. 
 
 ### Background
 
@@ -35,10 +35,11 @@ For lab-1, you will use a virtual machine with Ubuntu 16.04 operating system. Fo
 
 #### Setting up a Virtual Machine and Other Essentials
 
-1. Download the [VM image](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2) (8.8 GB) on CS gilligan machines or your personal laptops (with QEMU and KVM enabled).
+1. Download the compressed [VM image](https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz) (3.4 GB) on CS gilligan machines or your personal laptops (with QEMU and KVM enabled). The uncompressed VM image is available for download [here](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2).
 ```
-$ wget http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2
+$ wget https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz
 ```
+
 
 2. Now start up a VM that listens on a specific port using the following command. To avoid contention over ports, use `<port-id> = 5900 + <team-number>`. For example, if your group-id is 15, your port-id will be 5915.
 ```
@@ -64,7 +65,7 @@ $ tar -zxf project-1.tar.gz
 $ cd project-1
 ```
 
-7. Verify that you have gdb 7.7 and gcc 4.8. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/lab1/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` then `x`.
+7. Verify that you have gdb 7.7 and gcc 4.8. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/master/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` then `x`.
 
 
 #### Running JOS VMM
@@ -107,7 +108,7 @@ The vmm directory includes the kernel-level support needed for the VMM--primaril
 
 #### Checking Support for VMX and Extended Paging
 
-Your first task will be to implement detection that the CPU supports vmx and extended paging. You will have to check the output of the cpuid instruction and check the values in certain model specific registers (MSRs). To understand how to implement the checks for the vmx and extended paging support, read Chapters 23.6, 24.6.2, and Appendices A.3.2-3 from the [Intel Manual](http://www.cs.utexas.edu/~vijay/cs360v-f20/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf).
+Your first task will be to implement detection that the CPU supports vmx and extended paging. You will have to check the output of the cpuid instruction and check the values in certain model specific registers (MSRs). To understand how to implement the checks for the vmx and extended paging support, read Chapters 23.6, 24.6.2, and Appendices A.3.2-3 from the [Intel Manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf).
 
 Once you have read these sections, you will understand how to check support for vmx and extended paging. Now, implement the vmx_check_support() and vmx_check_ept() functions in vmm/vmx.c. Please read the hints above these functions to spot code that is already provided, for example, to read MSRs.
 
