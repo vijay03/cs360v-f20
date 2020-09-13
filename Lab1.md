@@ -15,6 +15,9 @@ The README series is broken down into 4 parts:
 ## Lab-1
 
 For Lab-1, you will first set up your working environment and then implement code for making the guest environment.
+```diff
++ Deadline: 27th Sept 2020
+```
 
 ## 1. Getting Started
 
