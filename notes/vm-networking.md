@@ -1,6 +1,8 @@
 * Review previous class: Shadow Page Tables
 * Discuss Memory Virtualization with hardware support: Nested Paging  
 
+* For more general I/O virtualization information, check out [Hardware and Software Support for Virtualization](https://search.lib.utexas.edu/permalink/01UTAU_INST/be14ds/alma991057986159206011)
+
 * Problem: processing network in a virtualized setting
     * When packet arrives, VM that is currently running gets interrupted
     * Hypervisor determines which VM the packet should go to
@@ -27,16 +29,6 @@
         * Hypervisor no longer involved in copying data over to the VM
         * Hypervisor completely removed from the loop, only involved in setup phase
         * VMDQ has different queue for each VM, SR-IOV has different Virtual Function for each VM
-* Intel IO Acceleration Technology (IOAT)
-    * Suite of hardware features
-    * QuickData - Hardware DMA to VMs
-    * Direct Cache Access - Access caches directly (unclear whether this is different from DDIO)
-    * Extended Message Signaled Interrupts (MSI-X): distribute interrupts among CPUs
-    * Tune interrupt arrival times based on content of packets (Fast Packet Introspection)
-* Intel DDIO
-    * IO directly in and out of the processor last-level cache! 
-    * Very exciting for performance
-    * Last-level cache on Xeon processor is 20 MB, so a lot of space
 * The packet processing game:
     * 10 Gbps delivers 14.8M packets per second (assuming 64 byte packets and 20 byte pre-amble)
     * That gives us 67 ns to process a single packet
@@ -119,18 +111,7 @@
     * 4X40Gb ports
     * E5-2695 V4 2.1Ghz Processor
     * 16X1GB Huge Pages, 2048X2MB Huge Pages
-* **Open vSwitch (OvS)**
-    * Software switch used to form network of virtualized machines
-    * Ethernet switching done in the hypervisor
-    * Critical part of software-defined networking (implements OpenFlow)
-    * User-space controller, fast path in kernel
-    * DPDK is used to accelerate OvS
-    * The first packet of a new flow goes to user-space
-        * User space decides on a rule to handle this flow
-        * The rule is cached in the kernel
-        * Further packets of flow just go through the kernel
-    * Database used to persistently store rules (ovsdb-server)
-        * Communicates with user space component via RPC
+
 * Reading:
     * [Overview of IO-SRV](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-)
     * 10 min [Video explaining IO-SRV](https://www.intel.com/content/dam/www/program/support/us/en/videos/Intel-SR-IOV-Explanation.mp4)
