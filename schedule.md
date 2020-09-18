@@ -12,7 +12,7 @@
 | 09/24 Tue | Containers: the basics  | | [Notes](notes/container-basics.md) |  |
 | 10/01 Thu | The technologies behind containers  | | [Notes](notes/container-nc.md) |  |
 | 10/06 Tue | Container orchestration frameworks  | | [Notes](notes/container-orch.md) |  |
-| 10/08 Thu | TBD | | |  |
+| 10/08 Thu | **Guest Lecture**: Containerized Workflows by [Ivo Jimenez](https://ivotron.me/) | | |  |
 | 10/13 Tue | SCONE: Secure Linux Containers with Intel SGX | [OSDI 16 paper](https://www.usenix.org/system/files/conference/osdi16/osdi16-arnautov.pdf), [Slides](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/arnautov)  | |  |
 | 10/15 Thu | My VM is Lighter (and Safer) than your Container  | [SOSP 17 paper](http://cnp.neclab.eu/projects/lightvm/lightvm.pdf), [Slides](https://www.sigops.org/s/conferences/sosp/2017/slides/lightvm-sosp17-slides.pptx)  | |  |
 | 10/20 Tue | Unikernels: Rise of the Virtual Library Operating System  | [ACM Queue article](https://www.seltzer.com/margo/teaching/CS508.19/papers/madhavapeddy13.pdf)  | | **Project 1 due** |
