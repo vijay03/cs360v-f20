@@ -4,7 +4,7 @@
 | 09/01 Tue | Virtual Machines: the basics  | | [Notes](notes/vm-basics.md) |  |
 | 09/03 Thu | Virtualizing CPUs | [QEMU Internals Slides](https://www.csd.uoc.gr/~hy428/reading/qemu-internals-slides-may6-2014.pdf) | [Notes](notes/vm-cpu.md)  |  |
 | 09/08 Tue | Virtualizing DRAM | | [Notes](notes/vm-mem.md) | |
-| 09/10 Thu | Virtualizing Network  | | [Notes](notes/vm-networking.md) |  |
+| 09/10 Thu | Virtualizing I/O  | | [Notes](notes/vm-networking.md) |  |
 | 09/15 Tue | Para Virtualization | [Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf) | [Notes](notes/vm-para.md) |  |
 | 09/17 Thu | Review  | | |  |
 | 09/22 Tue | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
