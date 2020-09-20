@@ -51,22 +51,21 @@ $ qemu-system-x86_64 -cpu host -drive file=<path-to-qcow2-image>,format=qcow2 -m
 $ ssh -p <port-id> cs378@localhost
 ```
 
-5. Copy your public *and* private ssh keys from the CS lab machine or from your local machine into the VM.
+4. Copy your public *and* private ssh keys from the CS lab machine or from your local machine into the VM.
 Alternatively, you can generate a new key-pair on the VM using `ssh-keygen -t rsa`. You should send the public key in the VM to the TAs.
 ```
 $ scp -P <port-id> $HOME/.ssh/id_rsa.pub cs378@localhost:~/.ssh/id_rsa.pub
 $ scp -P <port-id> $HOME/.ssh/id_rsa cs378@localhost:~/.ssh/id_rsa
 ```
 
-6. You will now be able to clone the project code `project-1.tar.gz` and access it from the VM. We will provide additional instructions later on how to use gitolite for project-1.
-```
-$ wget http://www.cs.utexas.edu/~soujanya/project-1.tar.gz
-$ tar -zxf project-1.tar.gz
-$ cd project-1
-```
+5. Verify that you have gdb 7.7 and gcc 4.8 in the VM. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/master/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` then `x`.
 
-7. Verify that you have gdb 7.7 and gcc 4.8. Also cross check that you have python-3.4 installed or in your $HOME directory. In case you need to install any of them, follow the instructions on the [installations](https://github.com/vijay03/cs360v-f20/blob/master/installation.md) page. Note that to exit from QEMU VM press `Ctrl a` then `x`.
-
+6. We will be using gitolite to manage access for different groups. Inside the VM, clone the gitolite repo using
+```
+git clone cs378-vijay@git.cs.utexas.edu:group<groupnumber>-project1
+```
+The repo will contain a project-1 folder which has the source code for the project.
+You can use git to commit and push your code changes to the gitolite repo.
 
 #### Running JOS VMM
 
@@ -128,13 +127,6 @@ In all lab assignments in project-1, the functions you will be implementing migh
 ## Submission Details
 
 Submissions will be handled through gitolite.
-Clone the gitolite repo using
-```
-git clone cs378-vijay@git.cs.utexas.edu:group<groupnumber>-project1
-```
-The repo will be empty initially. Copy your project-1 code over to this repo and make your future changes here.
-You can now use gitolite to modify the source code, commit, and push your code changes like any other Git repo.
-
 Commits made until midnight on the day of the submission deadline will be used for grading.
 
 ## Contact Details
