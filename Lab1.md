@@ -127,9 +127,15 @@ In all lab assignments in project-1, the functions you will be implementing migh
 
 ## Submission Details
 
-Submissions will be handled through gitolite. We will send out an announcement once gitolite is set up.
+Submissions will be handled through gitolite.
+Clone the gitolite repo using
+```
+git clone cs378-vijay@git.cs.utexas.edu:<groupnumber>-project1
+```
+The repo will be empty initially. Copy your project-1 code over to this repo and make your future changes here.
+You can now use gitolite to modify the source code, commit, and push your code changes like any other Git repo.
 
-Please use gitolite to modify the source code, commit, and push your code changes. Commits made until midnight on the day of the submission deadline will be used for grading.
+Commits made until midnight on the day of the submission deadline will be used for grading.
 
 ## Contact Details
 
