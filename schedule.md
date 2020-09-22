@@ -6,9 +6,9 @@
 | 09/08 Tue | Virtualizing DRAM | | [Notes](notes/vm-mem.md) | |
 | 09/10 Thu | Virtualizing I/O  | | [Notes](notes/vm-networking.md) |  |
 | 09/15 Tue | Para Virtualization | [Xen and the Art of Virtualization, SOSP 2003](https://cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/2003-xensosp.pdf) | [Notes](notes/vm-para.md) |  |
-| 09/17 Thu | Review  | | |  |
-| 09/22 Tue | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
-| 09/24 Thu | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | [Notes](notes/vm-nested.md) |  |
+| 09/17 Thu | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
+| 09/22 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | [Notes](notes/vm-nested.md) |  |
+| 09/24 Thu | Review |  |
 | 09/24 Tue | Containers: the basics  | | [Notes](notes/container-basics.md) |  |
 | 10/01 Thu | The technologies behind containers  | | [Notes](notes/container-nc.md) |  |
 | 10/06 Tue | Container orchestration frameworks  | | [Notes](notes/container-orch.md) |  |
