@@ -66,6 +66,7 @@ git clone cs378-vijay@git.cs.utexas.edu:group<groupnumber>-project1
 ```
 The repo will contain a project-1 folder which has the source code for the project.
 You can use git to commit and push your code changes to the gitolite repo.
+You can also get started with the lab without having access to gitolite. Find the project-1 code [here](https://github.com/vijay03/cs360v-f20/blob/master/project-1.tar.gz) and untar it and get access to the project-1 code.
 
 #### Running JOS VMM
 
