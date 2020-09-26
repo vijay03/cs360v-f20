@@ -30,3 +30,6 @@ talk to me during office hours.
 * Why are para-virtualized device drivers split into front-end and back-end? What does this achieve?
 * How is memory virtualized in Xen? Is this faster than memory virtualization with EPT? 
 * Given that binary translation is done on the fly, why is this approach effective for full-machine virtualization? Why isn't the overhead prohibitive?
+* Once set up, among shadow page tables and EPT, which are faster? 
+* How does hardware support help CPU virtualization? 
+
