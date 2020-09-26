@@ -1,4 +1,4 @@
-To help you prepare for Midterm 1, here are some questions you should
+To help you review the material we have covered so far, here are some questions you should
 be able to answer. If you are unsure about any of the questions, come
 talk to me during office hours. 
 
