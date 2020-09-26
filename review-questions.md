@@ -25,4 +25,8 @@ talk to me during office hours.
   10 applications, and the host OS is executing 20 applications, how
   many page tables in total are allocated in memory at this point?
 * Why was the x86 instruction set considered not virtualizable?
-  Explain with an example. 
+  Explain with an example.
+* What is be a scenario where para-virtualization is preferrable to hardware-assisted virtualization?
+* Why are para-virtualized device drivers split into front-end and back-end? What does this achieve?
+* How is memory virtualized in Xen? Is this faster than memory virtualization with EPT? 
+* Given that binary translation is done on the fly, why is this approach effective for full-machine virtualization? Why isn't the overhead prohibitive?
