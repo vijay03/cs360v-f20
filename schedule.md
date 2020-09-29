@@ -9,7 +9,7 @@
 | 09/17 Thu | Virtualizing storage + security in VMs  | | [Notes](notes/vm-stor-sec.md) |  |
 | 09/22 Tue | The Turtles Project: Design and Implementation of Nested Virtualization | [OSDI 10 paper](https://www.usenix.org/event/osdi10/tech/full_papers/Ben-Yehuda.pdf)  | [Notes](notes/vm-nested.md) |  |
 | 09/24 Thu | Review |  |
-| 09/24 Tue | Containers: the basics  | | [Notes](notes/container-basics.md) |  |
+| 09/29 Tue | Containers: the basics  | | [Notes](notes/container-basics.md) |  |
 | 10/01 Thu | The technologies behind containers  | | [Notes](notes/container-nc.md) |  |
 | 10/06 Tue | Container orchestration frameworks  | | [Notes](notes/container-orch.md) |  |
 | 10/08 Thu | **Guest Lecture**: Containerized Workflows by [Ivo Jimenez](https://ivotron.me/) | | |  |
