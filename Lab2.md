@@ -221,3 +221,12 @@ Because the host isn't handling traps from the guest yet, the VM will be termina
 ```
 Unhandled VMEXIT, aborting guest.
 ```
+
+### Submission and Deadline
+
+```diff
+Please submit your code for part-1 and part-2 and the assembly_code.md readme via gitolite. The deadline for lab-2 of project-1 is: 
+
++ October 19th, 11:59 PM CST
+
+```
