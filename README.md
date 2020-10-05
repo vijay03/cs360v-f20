@@ -81,7 +81,7 @@ https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?
 <p>The first project will involve building parts of your own
   hypervisor. You will need to know the basics of operating systems,
   C, and assembly to complete this project. README for project one, lab-1:
-  https://github.com/vijay03/cs360v-f20/blob/lab1/Lab1.md </p>
+  https://github.com/vijay03/cs360v-f20/blob/master/Project1.md </p>
 
 <p>The second project is open-ended, and will involve adding a new
   feature to any open-source project related to virtualization and
