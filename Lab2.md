@@ -224,7 +224,7 @@ Unhandled VMEXIT, aborting guest.
 
 ### Submission and Deadline
 
-Please submit your code for part-1 and part-2 and the assembly_code.md readme via gitolite. The deadline for lab-2 of project-1 is: 
+Please submit your code for part-1 and part-2 and the assembly_code.md readme via gitolite. To mark your submission, please have a commit labelled "Lab 2 submission. 0/1/.. slip days used.". You can modify and add a dummy file for this commit if you want. We will consider the last such commit for evaluation. The deadline for lab-2 of project-1 is: 
 
 ```diff
 + October 19th, 11:59 PM CST
