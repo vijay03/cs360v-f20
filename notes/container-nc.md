@@ -31,37 +31,37 @@
     * Took over 5 years
 * Example: gethostname() used to read system->nodename, now reads u->nodename where u is the namespace
 * **UTS Namespace:**
-* Provides namespace-specific hostname and domainname (for Network Information Service)
+   * Provides namespace-specific hostname and domainname (for Network Information Service)
 * **Network Namespace**:
-* A network namespace is logically another copy of the network stack, with its own routes, firewall rules, and network devices.
-* The network namespace is struct net. (defined in include/net/net_namespace.h) 
-* Struct net includes all network stack ingredients, like: loopback device, all network tables:routing, neighboring, etc, all sockets, /procfs and /sysfs entries
-* Each network namespace has its own IP addresses
-* A network device belongs to exactly one network namespace
-* A socket belongs to exactly one network namespace
-* When you delete a namespace, all its migratable network devices are moved to the the default namespace
-* Communicating between two network namespaces:
-    * Veth (virtual ethernet) is used like a pipe between two namespaces
-    * Sockets also work
+   * A network namespace is logically another copy of the network stack, with its own routes, firewall rules, and network devices.
+   * The network namespace is struct net. (defined in include/net/net_namespace.h) 
+   * Struct net includes all network stack ingredients, like: loopback device, all network tables:routing, neighboring, etc, all sockets, /procfs and /sysfs entries
+   * Each network namespace has its own IP addresses
+   * A network device belongs to exactly one network namespace
+   * A socket belongs to exactly one network namespace
+   * When you delete a namespace, all its migratable network devices are moved to the the default namespace
+   * Communicating between two network namespaces:
+      * Veth (virtual ethernet) is used like a pipe between two namespaces
+      * Sockets also work
 * **Mount Namespace**:
-* On creation, we copy the file system tree to new space 
-* All previous mounts will be visible
-* Future mounts/unmounts invisible to the rest of the system
-* Weird bug: mount command updates /etc/mtab, which is visible across all namespaces
-    * So mount in one namespace will be visible to another
-    * However, if you cat /proc/mounts, namespace-specific mounts wont be visible externally
-* Another weird bug:
-    * By default, Fedora systemd will share all mount information across namespaces
-    * Have to explicitly mark as private
-* More sophisticated than chroot jails:
-    * Mount namespaces can be connected so changes in one show up in another (called mount propogation)
+   * On creation, we copy the file system tree to new space 
+   * All previous mounts will be visible
+   * Future mounts/unmounts invisible to the rest of the system
+   * Weird bug: mount command updates /etc/mtab, which is visible across all namespaces
+       * So mount in one namespace will be visible to another
+      * However, if you cat /proc/mounts, namespace-specific mounts wont be visible externally
+   * Another weird bug:
+      * By default, Fedora systemd will share all mount information across namespaces
+      * Have to explicitly mark as private
+   * More sophisticated than chroot jails:
+      * Mount namespaces can be connected so changes in one show up in another (called mount propogation)
 * **PID Namespace:**
-* Processes in different PID namespaces can have the same process ID
-* When creating the first process in a new namespace, its PID is 1
+   * Processes in different PID namespaces can have the same process ID
+   * When creating the first process in a new namespace, its PID is 1
 * **User Namespace:**
-* A process will have distinct set of UIDs, GIDs and capabilities
+   * A process will have distinct set of UIDs, GIDs and capabilities
 * **IPC Namespace:**
-* Each namespace gets its own IPC objects and POSIX message queues
+   * Each namespace gets its own IPC objects and POSIX message queues
 
 ## CGroups
 * Control Groups (cgroups) are a mechanism for applying hardware resource limits and access controls to a process or collection of processes
