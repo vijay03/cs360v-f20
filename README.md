@@ -43,7 +43,7 @@ Office hours: Monday 5-6 PM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)*
 
 Email: aashaka@cs.utexas.edu
 
-Office hours: Wednesday 5-6 PM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)** 
+Office hours: Wednesday ~~5-6 PM~~ 10-11 AM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)** 
 
 ### Grading 
 
