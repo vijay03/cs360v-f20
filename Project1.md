@@ -11,7 +11,10 @@ Please find the different lab assignment for project-1 here:
 
 1. [Lab-1](https://github.com/vijay03/cs360v-f20/blob/master/Lab1.md)
 2. [Lab-2](https://github.com/vijay03/cs360v-f20/blob/master/Lab2.md)
+2. [Lab-3](https://github.com/vijay03/cs360v-f20/blob/master/Lab3.md)
+2. [Lab-4](https://github.com/vijay03/cs360v-f20/blob/master/Lab4.md)
 
+Project-1 accounts for 50 points in total, split between Lab-1 to 4 as 10, 15, 10, and 15 points respectively.
 
 ### Background
 
