@@ -21,7 +21,7 @@
 | 10/29 Tue | Unikernels: Library OS for the cloud  | [ASPLOS 13 paper](http://mort.io/publications/pdf/asplos13-unikernels.pdf)  | |  |
 | 11/03 Tue | **No class - OSDI** | | |  |
 | 11/05 Thu | **No class - OSDI** | | |  |
-| 11/10 Tue | Serverless computing: the basics + Firecracker  | [Firecracker (NSDI 20)] | [Notes](notes/serverless.md) (https://www.usenix.org/conference/nsdi20/presentation/agache) | | 
+| 11/10 Tue | Serverless computing: the basics + Firecracker  | [Firecracker (NSDI 20)](https://www.usenix.org/conference/nsdi20/presentation/agache) | [Notes](notes/serverless.md)  | | 
 | 11/12 Thu |Serverless Computing: One Step Forward, Two Steps Back | [CIDR19](http://cidrdb.org/cidr2019/papers/p119-hellerstein-cidr19.pdf) | [Notes](notes/serverless-arch.md), [Notes (Sama Ziki)](notes/arch-sama.md) |  |
 | 11/17 Tue | From Laptop to Lambda: Outsourcing Everyday Jobs to Thousands of Transient Functional Containers | [ATC19](https://cs.stanford.edu/~matei/papers/2019/usenix_atc_gg.pdf) | [Notes (Sama Ziki)](notes/cidr19.md) |  |
 | 11/19 Thu | GG + Review  | | [Notes (Sama Ziki)](notes/gg.md) |  |
